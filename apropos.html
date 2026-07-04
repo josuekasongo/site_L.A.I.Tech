@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À Propos - L.A.I. TECH | Laboratoire et Atelier des Innovations Technologiques</title>
+    <meta name="description" content="Découvrez L.A.I. TECH : présentation institutionnelle, mission, vision, valeurs, domaines d'activité, organisation, gammes de produits et philosophie d'innovation.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
+    <style>
+        /* ============================================================
+           STYLES SPÉCIFIQUES À PROPOS
+           ============================================================ */
+
+        /* ---- Valeurs ---- */
+        .values-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .value-chip {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1.4rem;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-white);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            transition: var(--transition);
+        }
+        .value-chip:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(128,0,32,0.12);
+        }
+        .value-chip .chip-dot {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: var(--primary-color);
+            flex-shrink: 0;
+        }
+
+        /* ---- Domaines d'activité ---- */
+        .domains-section {
+            padding: 7rem 0;
+            background: var(--bg-dark-secondary);
+        }
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin-top: 3.5rem;
+        }
+        .domain-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            position: relative;
+            overflow: hidden;
+        }
+        .domain-card::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), transparent);
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+        .domain-card:hover { transform: translateY(-6px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+        .domain-card:hover::after { transform: scaleX(1); }
+        .domain-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+        .domain-card h3 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            color: var(--text-white);
+        }
+        .domain-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            margin-top: 0.8rem;
+        }
+        .domain-tag {
+            padding: 0.25rem 0.7rem;
+            background: rgba(128,0,32,0.06);
+            border: 1px solid rgba(128,0,32,0.12);
+            color: var(--primary-color);
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* ---- Organisation ---- */
+        .orga-section {
+            padding: 7rem 0;
+            background: var(--bg-dark-primary);
+        }
+        .orga-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            margin-top: 3.5rem;
+        }
+        .orga-card {
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .orga-card-lab {
+            background: linear-gradient(135deg, rgba(128,0,32,0.06) 0%, rgba(128,0,32,0.02) 100%);
+            border: 1px solid rgba(128,0,32,0.2);
+        }
+        .orga-card-atelier {
+            background: linear-gradient(135deg, rgba(8,145,178,0.06) 0%, rgba(8,145,178,0.02) 100%);
+            border: 1px solid rgba(8,145,178,0.2);
+        }
+        .orga-card-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+        .orga-card-badge {
+            padding: 0.4rem 1rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .badge-lab { background: rgba(128,0,32,0.1); color: var(--primary-color); }
+        .badge-atelier { background: rgba(8,145,178,0.1); color: var(--accent-cyan); }
+        .orga-card h3 { font-size: 1.4rem; font-weight: 800; }
+        .orga-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+        }
+        .orga-list li {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            font-size: 0.95rem;
+            color: var(--text-muted);
+        }
+        .orga-list li::before {
+            content: '✓';
+            font-weight: 700;
+            font-size: 0.85rem;
+            flex-shrink: 0;
+        }
+        .orga-card-lab .orga-list li::before { color: var(--primary-color); }
+        .orga-card-atelier .orga-list li::before { color: var(--accent-cyan); }
+
+        /* ---- Produits LAI Smart ---- */
+        .products-section {
+            padding: 7rem 0;
+            background: var(--bg-dark-secondary);
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.8rem;
+            margin-top: 3.5rem;
+        }
+        .product-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .product-card:hover { transform: translateY(-6px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-color: var(--border-color-glow); }
+        .product-badge {
+            display: inline-block;
+            padding: 0.3rem 0.9rem;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            background: rgba(128,0,32,0.08);
+            color: var(--primary-color);
+            border: 1px solid rgba(128,0,32,0.15);
+        }
+        .product-icon { font-size: 2.2rem; display: block; margin-bottom: 0.8rem; }
+        .product-card h3 { font-size: 1.1rem; font-weight: 800; margin-bottom: 0.4rem; }
+        .product-card .product-subtitle { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 1rem; }
+        .product-items { list-style: none; display: flex; flex-direction: column; gap: 0.35rem; }
+        .product-items li { font-size: 0.85rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.5rem; }
+        .product-items li::before { content: '▸'; color: var(--primary-color); }
+
+        /* ---- Objectifs ---- */
+        .objectives-section {
+            padding: 7rem 0;
+            background: var(--bg-dark-primary);
+        }
+        .objectives-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3.5rem;
+        }
+        .obj-card {
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            border: 1px solid var(--border-color);
+            background: var(--white);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            position: relative;
+            overflow: hidden;
+        }
+        .obj-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 4px;
+        }
+        .obj-card.short::before { background: var(--primary-color); }
+        .obj-card.medium::before { background: var(--accent-cyan); }
+        .obj-card.long::before { background: #8b5cf6; }
+        .obj-timeline {
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 1rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            display: inline-block;
+        }
+        .obj-card.short .obj-timeline { background: rgba(128,0,32,0.08); color: var(--primary-color); }
+        .obj-card.medium .obj-timeline { background: rgba(8,145,178,0.08); color: var(--accent-cyan); }
+        .obj-card.long .obj-timeline { background: rgba(139,92,246,0.08); color: #8b5cf6; }
+        .obj-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 1.2rem; }
+        .obj-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+        .obj-list li { font-size: 0.88rem; color: var(--text-muted); display: flex; align-items: flex-start; gap: 0.6rem; line-height: 1.5; }
+        .obj-card.short .obj-list li::before { content: '→'; color: var(--primary-color); font-weight: 700; flex-shrink: 0; }
+        .obj-card.medium .obj-list li::before { content: '→'; color: var(--accent-cyan); font-weight: 700; flex-shrink: 0; }
+        .obj-card.long .obj-list li::before { content: '→'; color: #8b5cf6; font-weight: 700; flex-shrink: 0; }
+
+        /* ---- Identité & Philosophie ---- */
+        .identity-philo-section {
+            padding: 7rem 0;
+            background: var(--bg-dark-secondary);
+        }
+        .identity-philo-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3.5rem;
+            align-items: start;
+        }
+        .brand-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+        }
+        .brand-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+        .brand-name-display {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            letter-spacing: -1px;
+            margin-bottom: 0.5rem;
+        }
+        .brand-meaning {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 2rem;
+        }
+        .slogan-block {
+            background: rgba(128,0,32,0.04);
+            border-left: 3px solid var(--primary-color);
+            padding: 1rem 1.5rem;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin-bottom: 1rem;
+        }
+        .slogan-block p {
+            font-style: italic;
+            font-weight: 600;
+            color: var(--text-white);
+            font-size: 0.95rem;
+        }
+        .philo-card {
+            background: linear-gradient(135deg, rgba(128,0,32,0.04) 0%, transparent 100%);
+            border: 1px solid rgba(128,0,32,0.15);
+            border-radius: var(--radius-lg);
+            padding: 2.5rem;
+        }
+        .philo-card h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.8rem; }
+        .philo-card p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.8;
+            margin-bottom: 1.2rem;
+        }
+        .philo-card p:last-child { margin-bottom: 0; }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .orga-grid, .identity-philo-grid { grid-template-columns: 1fr; }
+            .objectives-grid { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 600px) {
+            .domains-grid, .products-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+
+    <!-- Anti Google Translate Banner -->
+    <style>
+        body { top: 0 !important; }
+        .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame { display: none !important; }
+        .goog-tooltip, .goog-tooltip:hover { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+        #goog-gt-tt, .VIpgJd-ZVi9od-ORHb-OEVmcd, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc { display: none !important; }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header / Barre de navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.png?v=6" alt="L.A.I. TECH Logo" class="logo-img">
+                <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+            </a>
+
+            <!-- Google Translate Hidden Element -->
+            <div id="google_translate_element" style="display:none;"></div>
+            
+            <!-- Custom Language Toggle -->
+            <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">EN</button>
+
+            <nav id="primary-navigation" class="primary-navigation">
+                <ul class="nav-list">
+                    <li class="has-dropdown">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#hero">Héro</a></li>
+                            <li><a href="index.html#services">Domaines d'Expertise</a></li>
+                            <li><a href="index.html#valeurs">Nos Valeurs</a></li>
+                            <li><a href="index.html#gammes">Gammes de Produits</a></li>
+                            <li><a href="index.html#vision">Vision & Mission</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="labo.html" class="nav-link">Le Labo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="labo.html">Présentation</a></li>
+                            <li><a href="labo.html#recherche">Recherche & Développement</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="atelier.html" class="nav-link">L'Atelier</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="atelier.html">Présentation</a></li>
+                            <li><a href="atelier.html#conception">Prototypage & Fabrication</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="expertises.html" class="nav-link">Expertises</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="expertises.html">Toutes nos Expertises</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="boutique.html" class="nav-link">Boutique</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="boutique.html#shop">Équipements & Composants</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="apropos.html" class="nav-link active">À Propos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="apropos.html#about">Qui sommes-nous ?</a></li>
+                            <li><a href="apropos.html#domaines">Domaines d'Activité</a></li>
+                            <li><a href="apropos.html#organisation">Organisation</a></li>
+                            <li><a href="apropos.html#produits">Gammes de Produits</a></li>
+                            <li><a href="apropos.html#objectifs">Objectifs</a></li>
+                            <li><a href="apropos.html#identite">Identité & Philosophie</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="pdg.html" class="nav-link">Le PDG</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pdg.html#pdg">Mot du PDG</a></li>
+                            <li><a href="pdg.html#pdg-cv">Curriculum Vitae</a></li>
+                            <li><a href="pdg.html#pdg-team">L'Équipe L.A.I. TECH</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="contact.html" class="nav-link btn-nav">Contact</a>
+                        <ul class="dropdown-menu" style="left: auto; right: 0;">
+                            <li><a href="contact.html#contact">Formulaire de Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <section class="domains-section" id="domaines">
+            <div class="container">
+                <div style="text-align: center;">
+                    <span class="section-tag">Périmètre d'intervention</span>
+                    <h2 class="section-title" style="margin-top: 1rem;">Domaines d'<span class="accent-color">Activité</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle" style="margin-top: 1rem;">L.A.I. TECH intervient dans plusieurs domaines complémentaires pour couvrir tous les besoins technologiques.</p>
+                </div>
+
+                <div class="domains-grid">
+                    <!-- 1 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">⚡</span>
+                        <h3>Électricité, Électronique & Instrumentation</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Installations électriques</span>
+                            <span class="domain-tag">Conception électronique</span>
+                            <span class="domain-tag">Cartes PCB</span>
+                            <span class="domain-tag">Instrumentation</span>
+                        </div>
+                    </div>
+                    <!-- 2 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">🤖</span>
+                        <h3>Robotique & Systèmes Embarqués</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Robots intelligents</span>
+                            <span class="domain-tag">Arduino</span>
+                            <span class="domain-tag">ESP32</span>
+                            <span class="domain-tag">Raspberry Pi</span>
+                            <span class="domain-tag">Automatisation robotique</span>
+                        </div>
+                    </div>
+                    <!-- 3 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">🏠</span>
+                        <h3>Domotique & Smart Home</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Maisons intelligentes</span>
+                            <span class="domain-tag">Contrôle d'accès</span>
+                            <span class="domain-tag">Éclairage intelligent</span>
+                            <span class="domain-tag">Sécurité connectée</span>
+                        </div>
+                    </div>
+                    <!-- 4 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">🏭</span>
+                        <h3>Automatisation Industrielle</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Automates PLC</span>
+                            <span class="domain-tag">SCADA</span>
+                            <span class="domain-tag">Variateurs de vitesse</span>
+                            <span class="domain-tag">Supervision industrielle</span>
+                        </div>
+                    </div>
+                    <!-- 5 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">💻</span>
+                        <h3>Développement Logiciel & IA</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Applications Web</span>
+                            <span class="domain-tag">Applications mobiles</span>
+                            <span class="domain-tag">Logiciels métier</span>
+                            <span class="domain-tag">IA</span>
+                            <span class="domain-tag">Vision par ordinateur</span>
+                        </div>
+                    </div>
+                    <!-- 6 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">🌐</span>
+                        <h3>Réseaux, Télécommunications & IoT</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Réseaux informatiques</span>
+                            <span class="domain-tag">Internet des objets</span>
+                            <span class="domain-tag">Télécommunications</span>
+                            <span class="domain-tag">Solutions connectées</span>
+                        </div>
+                    </div>
+                    <!-- 7 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">☀️</span>
+                        <h3>Énergies Renouvelables</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Systèmes photovoltaïques</span>
+                            <span class="domain-tag">Gestion énergétique</span>
+                            <span class="domain-tag">Stockage d'énergie</span>
+                        </div>
+                    </div>
+                    <!-- 8 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">🔬</span>
+                        <h3>Recherche & Développement (R&D)</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Conception de produits</span>
+                            <span class="domain-tag">Prototypage</span>
+                            <span class="domain-tag">Innovation technologique</span>
+                            <span class="domain-tag">Tests & validation</span>
+                        </div>
+                    </div>
+                    <!-- 9 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">🎓</span>
+                        <h3>Formation & Conseil Technique</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Formation professionnelle</span>
+                            <span class="domain-tag">Assistance technique</span>
+                            <span class="domain-tag">Accompagnement de projets</span>
+                        </div>
+                    </div>
+                    <!-- 10 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">🏗️</span>
+                        <h3>Construction & Bâtiment</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Génie civil</span>
+                            <span class="domain-tag">Architecture intelligente</span>
+                            <span class="domain-tag">Topographie</span>
+                        </div>
+                    </div>
+                    <!-- 11 -->
+                    <div class="domain-card">
+                        <span class="domain-icon">⚙️</span>
+                        <h3>Mécanique Industrielle</h3>
+                        <div class="domain-tags">
+                            <span class="domain-tag">Usinage & Fabrication</span>
+                            <span class="domain-tag">Mécanique de précision</span>
+                            <span class="domain-tag">Conception de machines</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             6. ORGANISATION
+             ============================================= -->
+        <section class="orga-section" id="organisation">
+            <div class="container">
+                <div style="text-align: center;">
+                    <span class="section-tag">Structure interne</span>
+                    <h2 class="section-title" style="margin-top: 1rem;">Organisation de <span class="accent-color">L.A.I. TECH</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle" style="margin-top: 1rem;">L'entreprise est structurée autour de deux pôles principaux complémentaires.</p>
+                </div>
+                <div class="orga-grid">
+                    <!-- LAB -->
+                    <div class="orga-card orga-card-lab">
+                        <div class="orga-card-header">
+                            <span style="font-size: 2rem;">🔬</span>
+                            <div>
+                                <span class="orga-card-badge badge-lab">Pôle LAB</span>
+                                <h3>Laboratoire</h3>
+                            </div>
+                        </div>
+                        <ul class="orga-list">
+                            <li>Recherche scientifique</li>
+                            <li>Innovation</li>
+                            <li>Conception électronique</li>
+                            <li>Développement logiciel</li>
+                            <li>Intelligence artificielle</li>
+                            <li>Prototypage</li>
+                            <li>Essais et expérimentation</li>
+                            <li>Validation des solutions</li>
+                        </ul>
+                    </div>
+                    <!-- WORKSHOP -->
+                    <div class="orga-card orga-card-atelier">
+                        <div class="orga-card-header">
+                            <span style="font-size: 2rem;">🔧</span>
+                            <div>
+                                <span class="orga-card-badge badge-atelier">Pôle WORKSHOP</span>
+                                <h3>Atelier</h3>
+                            </div>
+                        </div>
+                        <ul class="orga-list">
+                            <li>Fabrication</li>
+                            <li>Assemblage</li>
+                            <li>Installation sur site</li>
+                            <li>Maintenance préventive & curative</li>
+                            <li>Réparation</li>
+                            <li>Intégration des systèmes</li>
+                            <li>Mise en service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             7. PRODUITS — GAMME LAI SMART
+             ============================================= -->
+        <section class="products-section" id="produits">
+            <div class="container">
+                <div style="text-align: center;">
+                    <span class="section-tag">Marque LAI Smart</span>
+                    <h2 class="section-title" style="margin-top: 1rem;">Nos <span class="accent-color">Gammes de Produits</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle" style="margin-top: 1rem;">Sous la marque <strong>LAI Smart</strong>, plusieurs familles de produits sont en cours de développement.</p>
+                </div>
+                <div class="products-grid">
+                    <!-- FARM -->
+                    <div class="product-card">
+                        <span class="product-badge">LAI Smart</span>
+                        <span class="product-icon">🌿</span>
+                        <h3>FARM</h3>
+                        <p class="product-subtitle">Solutions agricoles intelligentes</p>
+                        <ul class="product-items">
+                            <li>Irrigation automatique</li>
+                            <li>Surveillance des cultures</li>
+                            <li>Station météo</li>
+                            <li>Gestion des réservoirs</li>
+                        </ul>
+                    </div>
+                    <!-- HOME -->
+                    <div class="product-card">
+                        <span class="product-badge">LAI Smart</span>
+                        <span class="product-icon">🏠</span>
+                        <h3>HOME</h3>
+                        <p class="product-subtitle">Solutions pour maisons intelligentes</p>
+                        <ul class="product-items">
+                            <li>Éclairage connecté</li>
+                            <li>Serrures intelligentes</li>
+                            <li>Alarmes</li>
+                            <li>Contrôle d'accès</li>
+                        </ul>
+                    </div>
+                    <!-- ENERGY -->
+                    <div class="product-card">
+                        <span class="product-badge">LAI Smart</span>
+                        <span class="product-icon">☀️</span>
+                        <h3>ENERGY</h3>
+                        <p class="product-subtitle">Solutions énergétiques</p>
+                        <ul class="product-items">
+                            <li>Gestion solaire</li>
+                            <li>Contrôleurs de charge</li>
+                            <li>Monitoring énergétique</li>
+                        </ul>
+                    </div>
+                    <!-- INDUSTRY -->
+                    <div class="product-card">
+                        <span class="product-badge">LAI Smart</span>
+                        <span class="product-icon">🏭</span>
+                        <h3>INDUSTRY</h3>
+                        <p class="product-subtitle">Automatisation industrielle</p>
+                        <ul class="product-items">
+                            <li>Contrôle de machines</li>
+                            <li>Supervision</li>
+                            <li>Maintenance prédictive</li>
+                        </ul>
+                    </div>
+                    <!-- SECURITY -->
+                    <div class="product-card">
+                        <span class="product-badge">LAI Smart</span>
+                        <span class="product-icon">🔐</span>
+                        <h3>SECURITY</h3>
+                        <p class="product-subtitle">Sécurité intelligente</p>
+                        <ul class="product-items">
+                            <li>Vidéosurveillance</li>
+                            <li>Alarmes</li>
+                            <li>Détection d'intrusion</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             8. OBJECTIFS
+             ============================================= -->
+        <section class="objectives-section" id="objectifs">
+            <div class="container">
+                <div style="text-align: center;">
+                    <span class="section-tag">Feuille de route</span>
+                    <h2 class="section-title" style="margin-top: 1rem;">Nos <span class="accent-color">Objectifs</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle" style="margin-top: 1rem;">Un plan de développement structuré en trois horizons temporels.</p>
+                </div>
+                <div class="objectives-grid">
+                    <div class="obj-card short">
+                        <span class="obj-timeline">Court terme</span>
+                        <h3>Lancement & Prototypes</h3>
+                        <ul class="obj-list">
+                            <li>Développer les premiers prototypes</li>
+                            <li>Créer un laboratoire fonctionnel</li>
+                            <li>Lancer les premières solutions domotiques et agricoles</li>
+                        </ul>
+                    </div>
+                    <div class="obj-card medium">
+                        <span class="obj-timeline">Moyen terme</span>
+                        <h3>Commercialisation</h3>
+                        <ul class="obj-list">
+                            <li>Commercialiser les produits LAI Smart</li>
+                            <li>Créer une application mobile commune</li>
+                            <li>Proposer des services d'installation et de maintenance</li>
+                        </ul>
+                    </div>
+                    <div class="obj-card long">
+                        <span class="obj-timeline">Long terme</span>
+                        <h3>Rayonnement & Expansion</h3>
+                        <ul class="obj-list">
+                            <li>Fabriquer des produits sous la marque L.A.I. TECH</li>
+                            <li>Collaborer avec des universités et centres de recherche</li>
+                            <li>Exporter les solutions vers d'autres pays africains</li>
+                            <li>Devenir un acteur reconnu de l'innovation technologique</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =============================================
+             9 & 10. IDENTITÉ DE MARQUE & PHILOSOPHIE
+             ============================================= -->
+        <section class="identity-philo-section" id="identite">
+            <div class="container">
+                <div style="text-align: center;">
+                    <span class="section-tag">ADN de L.A.I. TECH</span>
+                    <h2 class="section-title" style="margin-top: 1rem;">Identité & <span class="accent-color">Philosophie</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="identity-philo-grid">
+                    <!-- Identité de marque -->
+                    <div class="brand-card">
+                        <h3>🏷️ Identité de marque</h3>
+                        <div class="brand-name-display">L.A.I. TECH</div>
+                        <p class="brand-meaning">Laboratoire et Atelier des Innovations Technologiques</p>
+
+                        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Slogans</p>
+                        <div class="slogan-block">
+                            <p>« De l'idée à l'innovation, de l'innovation à la réalisation. »</p>
+                        </div>
+                        <div class="slogan-block">
+                            <p>« Imaginer, Concevoir, Innover. »</p>
+                        </div>
+                    </div>
+
+                    <!-- Philosophie -->
+                    <div class="philo-card">
+                        <h3>💡 Notre Philosophie</h3>
+                        <p>Chez L.A.I. TECH, nous croyons que <strong>chaque problème est une opportunité d'innover</strong>. Notre approche consiste à identifier les besoins réels, imaginer des solutions adaptées, développer des prototypes, tester leur efficacité puis les transformer en produits fiables et accessibles.</p>
+                        <p>En réunissant la rigueur d'un <strong>laboratoire</strong> et le savoir-faire d'un <strong>atelier</strong>, nous créons des technologies utiles qui accompagnent la modernisation des secteurs de l'agriculture, de l'industrie, de l'énergie, de l'habitat et des services.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA final -->
+        <section style="padding: 5rem 0; background: var(--bg-dark-primary); text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 1rem;">Prêt à collaborer avec <span class="accent-color">L.A.I. TECH</span> ?</h2>
+                <p style="color: var(--text-muted); margin-bottom: 2.5rem; max-width: 500px; margin-left: auto; margin-right: auto;">Découvrez toutes nos expertises ou contactez-nous directement pour discuter de votre projet.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="expertises.html" class="btn btn-primary" style="padding: 1rem 2.5rem;">Voir nos Expertises</a>
+                    <a href="pdg.html" class="btn btn-secondary" style="padding: 1rem 2.5rem; border-color: var(--border-color); color: var(--text-muted);">Mot du PDG</a>
+                    <a href="contact.html" class="btn btn-secondary" style="padding: 1rem 2.5rem; border-color: var(--border-color); color: var(--text-muted);">Nous contacter</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+                </a>
+                <p class="footer-desc">Laboratoire et Atelier des Innovations Technologiques. Recherche, Conception, Prototypage et Maintenance.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="labo.html">Le Labo</a></li>
+                    <li><a href="atelier.html">L'Atelier</a></li>
+                    <li><a href="expertises.html">Expertises</a></li>
+                    <li><a href="boutique.html">Boutique</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="pdg.html">Mot du PDG</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contactez-nous</h4>
+                <ul>
+                    <li>
+                        <span class="footer-contact-icon">📱</span>
+                        <a href="https://wa.me/243993676906" target="_blank">WhatsApp : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+243993676906">Tél : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">✉️</span>
+                        <a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📍</span>
+                        <span>Goma, RDC</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Heures d'ouverture</h4>
+                <p>Lundi - Vendredi : 8h00 - 17h00</p>
+                <p>Samedi : 9h00 - 14h00</p>
+                <p class="status-open">Atelier ouvert aux visites</p>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--border-color); margin-top: 2rem;">
+            <p class="copyright" style="margin: 0;">&copy; 2026 L.A.I. TECH. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- Scripts Google Translate (Custom UI) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr', 
+                includedLanguages: 'en,fr', 
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function toggleLanguage() {
+            var currentLang = localStorage.getItem('lai_tech_lang') || 'fr';
+            var targetLang = currentLang === 'fr' ? 'en' : 'fr';
+            changeLanguage(targetLang);
+        }
+
+        function changeLanguage(langCode) {
+            var selectField = document.querySelector("#google_translate_element select");
+            if (!selectField) {
+                setTimeout(() => changeLanguage(langCode), 500);
+                return;
+            }
+            
+            for(var i=0; i < selectField.options.length; i++){
+                if(selectField.options[i].value == langCode){
+                    selectField.selectedIndex = i;
+                    var event = new Event('change');
+                    selectField.dispatchEvent(event);
+                    break;
+                }
+            }
+
+            // Update UI button
+            var btn = document.getElementById('langToggleBtn');
+            if (btn) {
+                btn.textContent = langCode === 'fr' ? 'EN' : 'FR';
+            }
+            
+            localStorage.setItem('lai_tech_lang', langCode);
+        }
+
+        // Prevent Google Translate Banner
+        const hideGoogleTranslate = () => {
+            document.body.style.top = '0px';
+            const banner = document.querySelector('.goog-te-banner-frame');
+            if (banner) banner.style.display = 'none';
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const savedLang = localStorage.getItem('lai_tech_lang');
+                if(savedLang && savedLang === 'en') {
+                    changeLanguage('en');
+                } else {
+                    var btn = document.getElementById('langToggleBtn');
+                    if (btn) btn.textContent = 'EN';
+                }
+                setInterval(hideGoogleTranslate, 100); // Aggressively hide the banner
+            }, 1000);
+        });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

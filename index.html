@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L.A.I. TECH - Laboratoire et Atelier des Innovations Technologiques</title>
+    <meta name="description"
+        content="L.A.I. TECH est spécialisé dans la recherche, la conception, le prototypage, l'installation et la maintenance de solutions technologiques innovantes en électricité, robotique, domotique et énergies renouvelables.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
+
+    <!-- Anti Google Translate Banner -->
+    <style>
+        body { top: 0 !important; }
+        .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame { display: none !important; }
+        .goog-tooltip, .goog-tooltip:hover { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+        #goog-gt-tt, .VIpgJd-ZVi9od-ORHb-OEVmcd, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc { display: none !important; }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header / Barre de navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="#hero" class="logo-link">
+                <img src="assets/images/logo.png?v=6" alt="L.A.I. TECH Logo" class="logo-img">
+                <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+            </a>
+
+            <!-- Google Translate Hidden Element -->
+            <div id="google_translate_element" style="display:none;"></div>
+            
+            <!-- Custom Language Toggle -->
+            <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">EN</button>
+
+            <nav id="primary-navigation" class="primary-navigation">
+                <ul class="nav-list">
+                    <li class="has-dropdown">
+                        <a href="index.html" class="nav-link active">Accueil</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#hero">Héro</a></li>
+                            <li><a href="index.html#services">Domaines d'Expertise</a></li>
+                            <li><a href="index.html#valeurs">Nos Valeurs</a></li>
+                            <li><a href="index.html#gammes">Gammes de Produits</a></li>
+                            <li><a href="index.html#vision">Vision & Mission</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="labo.html" class="nav-link">Le Labo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="labo.html">Présentation</a></li>
+                            <li><a href="labo.html#recherche">Recherche & Développement</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="atelier.html" class="nav-link">L'Atelier</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="atelier.html">Présentation</a></li>
+                            <li><a href="atelier.html#conception">Prototypage & Fabrication</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="expertises.html" class="nav-link">Expertises</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="expertises.html">Toutes nos Expertises</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="boutique.html" class="nav-link">Boutique</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="boutique.html#shop">Équipements & Composants</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="apropos.html" class="nav-link">À Propos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="apropos.html#about">Qui sommes-nous ?</a></li>
+                            <li><a href="apropos.html#domaines">Domaines d'Activité</a></li>
+                            <li><a href="apropos.html#organisation">Organisation</a></li>
+                            <li><a href="apropos.html#produits">Gammes de Produits</a></li>
+                            <li><a href="apropos.html#objectifs">Objectifs</a></li>
+                            <li><a href="apropos.html#identite">Identité & Philosophie</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="pdg.html" class="nav-link">Le PDG</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pdg.html#pdg">Mot du PDG</a></li>
+                            <li><a href="pdg.html#pdg-cv">Curriculum Vitae</a></li>
+                            <li><a href="pdg.html#pdg-team">L'Équipe L.A.I. TECH</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="contact.html" class="nav-link btn-nav">Contact</a>
+                        <ul class="dropdown-menu" style="left: auto; right: 0;">
+                            <li><a href="contact.html#contact">Formulaire de Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <!-- Hero Background Slides -->
+        <div class="hero-slides">
+            <div class="hero-slide active" style="background-image: url('assets/images/hero_bg_1.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/images/hero_bg_2.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/images/hero_bg_3.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('assets/images/hero_bg_4.jpg');"></div>
+        </div>
+        <!-- Indicateurs de slides -->
+            <div class="hero-slide-indicators" id="slideIndicators">
+                <span class="slide-dot active" onclick="goToSlide(0)"></span>
+                <span class="slide-dot" onclick="goToSlide(1)"></span>
+                <span class="slide-dot" onclick="goToSlide(2)"></span>
+                <span class="slide-dot" onclick="goToSlide(3)"></span>
+            </div>
+            <div class="hero-bg-overlay"></div>
+            <div class="hero-container">
+                <div class="hero-content">
+                    <div class="badge">Innovation & Technologie</div>
+                    <h1 class="hero-title typewriter-element" data-text-1="Laboratoire et Atelier des" data-text-2="Innovations Technologiques">
+                        <span class="tw-part-1"></span><br><span class="highlight tw-part-2"></span>
+                    </h1>
+                    <p class="hero-subtitle typewriter-element" data-text="« De l'idée à l'innovation, de l'innovation à la réalisation. »"></p>
+                    <p class="hero-description typewriter-element" data-text="Nous concevons, fabriquons et maintenons des solutions technologiques modernes, fiables et adaptées aux besoins des particuliers, des entreprises et des industries."></p>
+
+                </div>
+                <div class="hero-graphic">
+                    <div class="tech-card-glass">
+                        <div class="circle-graphic">
+                            <svg viewBox="0 0 100 100" class="rotating-svg">
+                                <circle cx="50" cy="50" r="45" stroke="#800020" stroke-width="1" fill="none"
+                                    stroke-dasharray="10 5" />
+                                <circle cx="50" cy="50" r="38" stroke="#cbd5e1" stroke-width="2" fill="none" />
+                                <path d="M 50 12 A 38 38 0 0 1 88 50" stroke="#800020" stroke-width="3" fill="none"
+                                    stroke-linecap="round" />
+                            </svg>
+                            <div class="circle-center">
+                                <span class="stat-number">L.A.I</span>
+                                <span class="stat-label">TECH</span>
+                            </div>
+
+                            <!-- Orbiting icons — 1 orbit ring (orbit-ring-1) -->
+                            <div class="orbit-ring orbit-ring-1">
+                                <div class="orbit-icon orbit-icon-1" title="Électronique">⚡</div>
+                                <div class="orbit-icon orbit-icon-2" title="Robotique">🤖</div>
+                                <div class="orbit-icon orbit-icon-3" title="Énergie">☀️</div>
+                                <div class="orbit-icon orbit-icon-4" title="Réseau">🌐</div>
+                            </div>
+
+                        </div>
+                        <div class="pulse-points">
+                            <span class="pulse-dot red" style="top: 20%; left: 15%;"></span>
+                            <span class="pulse-dot blue" style="top: 75%; left: 80%;"></span>
+                            <span class="pulse-dot" style="top: 50%; left: 85%;"></span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#services" aria-label="Défiler vers le bas">
+                    <div class="mouse"><div class="wheel"></div></div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Section CTA Expertises -->
+        <section id="services" style="padding: 7rem 0; background-color: var(--bg-dark-secondary);">
+            <div class="container" style="text-align: center;">
+                <span class="section-tag">Nos Compétences</span>
+                <h2 class="section-title" style="margin-top: 1rem;">Domaines d'<span class="accent-color">Expertise</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle" style="margin-top: 1.5rem; margin-bottom: 3rem;">
+                    Électricité, Robotique, Domotique, IA, Énergies Renouvelables et bien plus encore.
+                </p>
+
+                <div class="expertises-grid" style="text-align: left; margin-bottom: 4rem;">
+                    <!-- 1. Électricité, Électronique -->
+                    <div class="expertise-card" data-index="1">
+                        <div class="expertise-icon red-glow">
+                            <svg viewBox="0 0 24 24" class="svg-icon">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z"
+                                    fill="currentColor" />
+                                <path d="M11 21.9h2c3.4-.4 6-3.2 6.4-6.6l-1.9-.2c-.3 2.3-2.1 4.1-4.5 4.5v2.3z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="mini-icon">⚡</div>
+                        </div>
+                        <h3>Électricité &amp; Électronique</h3>
+                        <p class="expertise-desc">Installations électriques, conception de cartes électroniques sur
+                            mesure, intégration de capteurs et maintenance électrique industrielle.</p>
+                        <ul class="expertise-list">
+                            <li>Installations électriques</li>
+                            <li>Cartes électroniques</li>
+                            <li>Mesures et capteurs</li>
+                            <li>Maintenance électrique</li>
+                        </ul>
+                    </div>
+
+                    <!-- 2. Robotique -->
+                    <div class="expertise-card" data-index="2">
+                        <div class="expertise-icon">
+                            <svg viewBox="0 0 24 24" class="svg-icon">
+                                <path
+                                    d="M19 8h-1V7c0-2.76-2.24-5-5-5S8 4.24 8 7v1H7c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm-6-4c1.66 0 3 1.34 3 3v1H10V7c0-1.66 1.34-3 3-3zm4 14H7v-8h10v8zm-7-5c-.83 0-1.5-.67-1.5-1.5S9.17 10 10 10s1.5.67 1.5 1.5S10.83 13 10 13zm6 0c-.83 0-1.5-.67-1.5-1.5S15.17 10 16 10s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="mini-icon">🤖</div>
+                        </div>
+                        <h3>Robotique &amp; Systèmes Embarqués</h3>
+                        <p class="expertise-desc">Développement sur microcontrôleurs avancés, création de robots
+                            autonomes et intégration de drones pour diverses applications.</p>
+                        <ul class="expertise-list">
+                            <li>Arduino / ESP32 / Raspberry Pi</li>
+                            <li>Robots autonomes</li>
+                            <li>Drones industriels &amp; civils</li>
+                            <li>Systèmes automatisés embarqués</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3. Domotique -->
+                    <div class="expertise-card" data-index="3">
+                        <div class="expertise-icon">
+                            <svg viewBox="0 0 24 24" class="svg-icon">
+                                <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm5 15h-2v-6H9v6H7v-7.81l5-4.5 5 4.5V18z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="mini-icon">🏠</div>
+                        </div>
+                        <h3>Domotique &amp; Smart Buildings</h3>
+                        <p class="expertise-desc">Automatisation résidentielle pour des maisons connectées, systèmes de
+                            sécurité intelligents et contrôle d'accès moderne.</p>
+                        <ul class="expertise-list">
+                            <li>Maison connectée &amp; IoT</li>
+                            <li>Contrôle d'accès intelligent</li>
+                            <li>Éclairage intelligent &amp; économique</li>
+                            <li>Sécurité &amp; Télésurveillance</li>
+                        </ul>
+                    </div>
+
+                    <!-- 4. Automatisation Industrielle -->
+                    <div class="expertise-card" data-index="4">
+                        <div class="expertise-icon">
+                            <svg viewBox="0 0 24 24" class="svg-icon">
+                                <path
+                                    d="M22 9h-4.79l-1.97-4.74C14.9 3.49 14.12 3 13.25 3H10.75c-.87 0-1.65.49-1.99 1.26L6.79 9H2c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h2v2c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-2h2c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zm-6 8H8v-4h8v4zm-1-8h-6l1.25-3h3.5L15 9z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="mini-icon">🏭</div>
+                        </div>
+                        <h3>Automatisation &amp; Contrôle</h3>
+                        <p class="expertise-desc">Programmation d'automates industriels (PLC), régulation par variateurs
+                            de vitesse et développement de systèmes de supervision SCADA.</p>
+                        <ul class="expertise-list">
+                            <li>Automates programmables (PLC)</li>
+                            <li>Variateurs de vitesse &amp; Moteurs</li>
+                            <li>Supervision industrielle (SCADA)</li>
+                            <li>Capteurs industriels &amp; Instrumentation</li>
+                        </ul>
+                    </div>
+
+                    <!-- 5. Construction -->
+                    <div class="expertise-card" data-index="5">
+                        <div class="expertise-icon">
+                            <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 2L2 12h3v8h14v-8h3L12 2zM7 18v-4h10v4H7z" fill="currentColor"/></svg>
+                            <div class="mini-icon">🏗️</div>
+                        </div>
+                        <h3>Construction &amp; Bâtiment</h3>
+                        <p class="expertise-desc">Ingénierie civile, conception architecturale et intégration de technologies modernes pour des bâtiments intelligents et durables.</p>
+                        <ul class="expertise-list">
+                            <li>Génie civil &amp; Topographie</li>
+                            <li>Architecture intelligente</li>
+                            <li>Smart Building</li>
+                            <li>Gestion de chantier</li>
+                        </ul>
+                    </div>
+
+                    <!-- 6. Mécanique -->
+                    <div class="expertise-card" data-index="6">
+                        <div class="expertise-icon">
+                            <svg viewBox="0 0 24 24" class="svg-icon"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.06-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.73,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.06,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.43-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.49-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" fill="currentColor"/></svg>
+                            <div class="mini-icon">⚙️</div>
+                        </div>
+                        <h3>Mécanique Industrielle</h3>
+                        <p class="expertise-desc">Conception, usinage, fabrication de pièces sur mesure et maintenance de systèmes mécaniques complexes pour l'industrie.</p>
+                        <ul class="expertise-list">
+                            <li>Usinage &amp; Fabrication</li>
+                            <li>Mécanique de précision</li>
+                            <li>Maintenance mécanique</li>
+                            <li>Conception de machines</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="expertises.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">
+                    Voir toutes nos Expertises →
+                </a>
+            </div>
+        </section>
+
+        <!-- Section Valeurs -->
+        <section id="valeurs" style="padding: 7rem 0; background-color: var(--bg-dark-primary);">
+            <div class="container" style="text-align: center;">
+                <span class="section-tag">Notre ADN</span>
+                <h2 class="section-title" style="margin-top: 1rem;">Nos <span class="accent-color">Valeurs</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle" style="margin-top: 1rem; margin-bottom: 3rem;">Les principes qui guident chacune de nos actions et décisions.</p>
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 900px; margin: 0 auto 3.5rem auto;">
+                    <span style="padding: 0.7rem 1.6rem; background: var(--white); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; cursor: default;" onmouseover="this.style.borderColor='#800020'; this.style.color='#800020'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor=''; this.style.color=''; this.style.transform='';">💡 Innovation</span>
+                    <span style="padding: 0.7rem 1.6rem; background: var(--white); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; cursor: default;" onmouseover="this.style.borderColor='#800020'; this.style.color='#800020'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor=''; this.style.color=''; this.style.transform='';">🏆 Excellence</span>
+                    <span style="padding: 0.7rem 1.6rem; background: var(--white); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; cursor: default;" onmouseover="this.style.borderColor='#800020'; this.style.color='#800020'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor=''; this.style.color=''; this.style.transform='';">✅ Qualité</span>
+                    <span style="padding: 0.7rem 1.6rem; background: var(--white); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; cursor: default;" onmouseover="this.style.borderColor='#800020'; this.style.color='#800020'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor=''; this.style.color=''; this.style.transform='';">🔒 Fiabilité</span>
+                    <span style="padding: 0.7rem 1.6rem; background: var(--white); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; cursor: default;" onmouseover="this.style.borderColor='#800020'; this.style.color='#800020'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor=''; this.style.color=''; this.style.transform='';">🎨 Créativité</span>
+                    <span style="padding: 0.7rem 1.6rem; background: var(--white); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; cursor: default;" onmouseover="this.style.borderColor='#800020'; this.style.color='#800020'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor=''; this.style.color=''; this.style.transform='';">🤝 Collaboration</span>
+                    <span style="padding: 0.7rem 1.6rem; background: var(--white); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; cursor: default;" onmouseover="this.style.borderColor='#800020'; this.style.color='#800020'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor=''; this.style.color=''; this.style.transform='';">⚖️ Intégrité</span>
+                    <span style="padding: 0.7rem 1.6rem; background: var(--white); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; cursor: default;" onmouseover="this.style.borderColor='#800020'; this.style.color='#800020'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor=''; this.style.color=''; this.style.transform='';">🌱 Dév. durable</span>
+                    <span style="padding: 0.7rem 1.6rem; background: var(--white); border: 1px solid var(--border-color); border-radius: 50px; font-size: 0.9rem; font-weight: 600; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: all 0.3s; cursor: default;" onmouseover="this.style.borderColor='#800020'; this.style.color='#800020'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor=''; this.style.color=''; this.style.transform='';">😊 Satisfaction client</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Gammes LAI Smart -->
+        <section id="gammes" style="padding: 7rem 0; background-color: var(--bg-dark-secondary);">
+            <div class="container" style="text-align: center;">
+                <span class="section-tag">Marque LAI Smart</span>
+                <h2 class="section-title" style="margin-top: 1rem;">Nos <span class="accent-color">Gammes de Produits</span></h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle" style="margin-top: 1rem; margin-bottom: 3.5rem;">Des solutions intelligentes pour chaque secteur de votre vie.</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1.5rem; text-align: left; margin-bottom: 3rem;">
+                    <!-- FARM -->
+                    <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.8rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.04);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.1)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+                        <div style="font-size: 2rem; margin-bottom: 0.8rem;">🌿</div>
+                        <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-color); margin-bottom: 0.4rem;">LAI Smart</div>
+                        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem;">FARM</h3>
+                        <p style="font-size: 0.82rem; color: var(--text-muted);">Irrigation auto, surveillance des cultures, station météo</p>
+                    </div>
+                    <!-- HOME -->
+                    <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.8rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.04);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.1)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+                        <div style="font-size: 2rem; margin-bottom: 0.8rem;">🏠</div>
+                        <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-color); margin-bottom: 0.4rem;">LAI Smart</div>
+                        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem;">HOME</h3>
+                        <p style="font-size: 0.82rem; color: var(--text-muted);">Éclairage connecté, serrures intelligentes, alarmes</p>
+                    </div>
+                    <!-- ENERGY -->
+                    <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.8rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.04);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.1)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+                        <div style="font-size: 2rem; margin-bottom: 0.8rem;">☀️</div>
+                        <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-color); margin-bottom: 0.4rem;">LAI Smart</div>
+                        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem;">ENERGY</h3>
+                        <p style="font-size: 0.82rem; color: var(--text-muted);">Gestion solaire, monitoring énergétique, stockage</p>
+                    </div>
+                    <!-- INDUSTRY -->
+                    <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.8rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.04);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.1)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+                        <div style="font-size: 2rem; margin-bottom: 0.8rem;">🏭</div>
+                        <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-color); margin-bottom: 0.4rem;">LAI Smart</div>
+                        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem;">INDUSTRY</h3>
+                        <p style="font-size: 0.82rem; color: var(--text-muted);">Contrôle de machines, supervision, maintenance prédictive</p>
+                    </div>
+                    <!-- SECURITY -->
+                    <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 1.8rem; transition: all 0.3s; box-shadow: 0 4px 15px rgba(0,0,0,0.04);" onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.1)';" onmouseout="this.style.transform=''; this.style.boxShadow='';">
+                        <div style="font-size: 2rem; margin-bottom: 0.8rem;">🔐</div>
+                        <div style="font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--primary-color); margin-bottom: 0.4rem;">LAI Smart</div>
+                        <h3 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem;">SECURITY</h3>
+                        <p style="font-size: 0.82rem; color: var(--text-muted);">Vidéosurveillance, alarmes, détection d'intrusion</p>
+                    </div>
+                </div>
+                <a href="boutique.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">Voir la Boutique →</a>
+            </div>
+        </section>
+
+        <!-- Section Vision & Mission (accueil) -->
+        <section id="vision" style="padding: 7rem 0; background-color: var(--bg-dark-primary);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="section-tag">Notre ambition</span>
+                    <h2 class="section-title" style="margin-top: 1rem;">Vision & <span class="accent-color">Mission</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-bottom: 4rem;">
+                    <div style="background: linear-gradient(135deg, rgba(128,0,32,0.05) 0%, transparent 100%); border: 1px solid rgba(128,0,32,0.2); border-radius: 16px; padding: 2.5rem; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--primary-color);"></div>
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🔭</div>
+                        <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Notre Vision</h3>
+                        <p style="color: var(--text-muted); line-height: 1.7;">Devenir une <strong>référence africaine</strong> dans la recherche, le développement et la fabrication de solutions technologiques intelligentes, en contribuant à la transformation numérique, industrielle, énergétique et agricole.</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(8,145,178,0.05) 0%, transparent 100%); border: 1px solid rgba(8,145,178,0.2); border-radius: 16px; padding: 2.5rem; position: relative; overflow: hidden;">
+                        <div style="position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: var(--accent-cyan);"></div>
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🎯</div>
+                        <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1rem;">Notre Mission</h3>
+                        <p style="color: var(--text-muted); line-height: 1.7;">Concevoir, développer et mettre en œuvre des solutions technologiques innovantes qui <strong>améliorent la qualité de vie</strong>, renforcent la compétitivité des entreprises et favorisent un développement durable.</p>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="apropos.html" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">Découvrir L.A.I. TECH →</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+                </a>
+                <p class="footer-desc">Laboratoire et Atelier des Innovations Technologiques. Recherche, Conception, Prototypage et Maintenance.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="labo.html">Le Labo</a></li>
+                    <li><a href="atelier.html">L'Atelier</a></li>
+                    <li><a href="expertises.html">Expertises</a></li>
+                    <li><a href="boutique.html">Boutique</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="pdg.html">Mot du PDG</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contactez-nous</h4>
+                <ul>
+                    <li>
+                        <span class="footer-contact-icon">📱</span>
+                        <a href="https://wa.me/243993676906" target="_blank">WhatsApp : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+243993676906">Tél : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">✉️</span>
+                        <a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📍</span>
+                        <span>Goma, RDC</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Heures d'ouverture</h4>
+                <p>Lundi - Vendredi : 8h00 - 17h00</p>
+                <p>Samedi : 9h00 - 14h00</p>
+                <p class="status-open">Atelier ouvert aux visites</p>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--border-color); margin-top: 2rem;">
+            <p class="copyright" style="margin: 0;">&copy; 2026 L.A.I. TECH. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="assets/js/app.js"></script>
+
+    <!-- Scripts Google Translate (Custom UI) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr', 
+                includedLanguages: 'en,fr', 
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function toggleLanguage() {
+            var currentLang = localStorage.getItem('lai_tech_lang') || 'fr';
+            var targetLang = currentLang === 'fr' ? 'en' : 'fr';
+            changeLanguage(targetLang);
+        }
+
+        function changeLanguage(langCode) {
+            var selectField = document.querySelector("#google_translate_element select");
+            if (!selectField) {
+                setTimeout(() => changeLanguage(langCode), 500);
+                return;
+            }
+            
+            for(var i=0; i < selectField.options.length; i++){
+                if(selectField.options[i].value == langCode){
+                    selectField.selectedIndex = i;
+                    var event = new Event('change');
+                    selectField.dispatchEvent(event);
+                    break;
+                }
+            }
+
+            // Update UI button
+            var btn = document.getElementById('langToggleBtn');
+            if (btn) {
+                btn.textContent = langCode === 'fr' ? 'EN' : 'FR';
+            }
+            
+            localStorage.setItem('lai_tech_lang', langCode);
+        }
+
+        // Prevent Google Translate Banner
+        const hideGoogleTranslate = () => {
+            document.body.style.top = '0px';
+            const banner = document.querySelector('.goog-te-banner-frame');
+            if (banner) banner.style.display = 'none';
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const savedLang = localStorage.getItem('lai_tech_lang');
+                if(savedLang && savedLang === 'en') {
+                    changeLanguage('en');
+                } else {
+                    var btn = document.getElementById('langToggleBtn');
+                    if (btn) btn.textContent = 'EN';
+                }
+                setInterval(hideGoogleTranslate, 100); // Aggressively hide the banner
+            }, 1000);
+        });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

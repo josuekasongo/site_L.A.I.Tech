@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Atelier - L.A.I. TECH</title>
+    <meta name="description" content="Découvrez l'Atelier de L.A.I. TECH : l'endroit physique où nous fabriquons, soudons et assemblons les prototypes et les équipements technologiques.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
+
+    <!-- Anti Google Translate Banner -->
+    <style>
+        body { top: 0 !important; }
+        .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame { display: none !important; }
+        .goog-tooltip, .goog-tooltip:hover { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+        #goog-gt-tt, .VIpgJd-ZVi9od-ORHb-OEVmcd, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc { display: none !important; }
+    </style>
+
+</head>
+<body>
+
+    <!-- Header / Barre de navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.png?v=6" alt="L.A.I. TECH Logo" class="logo-img">
+                <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+            </a>
+
+            <!-- Google Translate Hidden Element -->
+            <div id="google_translate_element" style="display:none;"></div>
+            
+            <!-- Custom Language Toggle -->
+            <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">EN</button>
+
+            <nav id="primary-navigation" class="primary-navigation">
+                <ul class="nav-list">
+                    <li class="has-dropdown">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#hero">Héro</a></li>
+                            <li><a href="index.html#services">Domaines d'Expertise</a></li>
+                            <li><a href="index.html#valeurs">Nos Valeurs</a></li>
+                            <li><a href="index.html#gammes">Gammes de Produits</a></li>
+                            <li><a href="index.html#vision">Vision & Mission</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="labo.html" class="nav-link">Le Labo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="labo.html">Présentation</a></li>
+                            <li><a href="labo.html#recherche">Recherche & Développement</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="atelier.html" class="nav-link active">L'Atelier</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="atelier.html">Présentation</a></li>
+                            <li><a href="atelier.html#conception">Prototypage & Fabrication</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="expertises.html" class="nav-link">Expertises</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="expertises.html">Toutes nos Expertises</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="boutique.html" class="nav-link">Boutique</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="boutique.html#shop">Équipements & Composants</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="apropos.html" class="nav-link">À Propos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="apropos.html#about">Qui sommes-nous ?</a></li>
+                            <li><a href="apropos.html#domaines">Domaines d'Activité</a></li>
+                            <li><a href="apropos.html#organisation">Organisation</a></li>
+                            <li><a href="apropos.html#produits">Gammes de Produits</a></li>
+                            <li><a href="apropos.html#objectifs">Objectifs</a></li>
+                            <li><a href="apropos.html#identite">Identité & Philosophie</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="pdg.html" class="nav-link">Le PDG</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pdg.html#pdg">Mot du PDG</a></li>
+                            <li><a href="pdg.html#pdg-cv">Curriculum Vitae</a></li>
+                            <li><a href="pdg.html#pdg-team">L'Équipe L.A.I. TECH</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="contact.html" class="nav-link btn-nav">Contact</a>
+                        <ul class="dropdown-menu" style="left: auto; right: 0;">
+                            <li><a href="contact.html#contact">Formulaire de Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="page-hero" style="background-color: var(--bg-dark);">
+            <div class="container">
+                <span class="section-tag">Pôle Fabrication</span>
+                <h1 class="section-title" style="font-size: 2.5rem; margin-top: 1rem;">L'<span class="accent-color">Atelier</span></h1>
+                <div class="title-underline"></div>
+                <p class="section-subtitle" style="margin-top: 1.5rem; max-width: 700px;">
+                    L'endroit physique où nous <strong>fabriquons</strong>, <strong>soudons</strong> et <strong>assemblons</strong> les prototypes et équipements technologiques conçus par le Labo.
+                </p>
+            </div>
+        </section>
+
+        <section id="conception" style="padding: 5rem 0; background-color: var(--bg-dark-secondary);">
+            <div class="container">
+                <div class="about-grid" style="gap: 3rem;">
+                    <div class="about-text-content">
+                        <span class="section-tag">Prototypage & Fabrication</span>
+                        <h2 class="section-title" style="font-size: 2rem; margin-top: 1rem;">Du Prototype à la <span class="accent-color">Réalité</span></h2>
+                        <div class="title-underline"></div>
+                        <p style="margin-top: 1.5rem; line-height: 1.8; color: var(--text-muted);">
+                            L'Atelier de L.A.I. TECH est le bras exécutif de l'entreprise. C'est ici que les conceptions du Laboratoire prennent forme physique grâce à nos équipements de pointe : imprimantes 3D, stations de soudure CMS, oscilloscopes, fraiseuses CNC et bien plus.
+                        </p>
+                        <p style="margin-top: 1rem; line-height: 1.8; color: var(--text-muted);">
+                            Nous assurons la fabrication complète, de l'assemblage des cartes électroniques à l'intégration dans des boîtiers imprimés en 3D, en passant par le câblage, les tests et la mise en service sur site.
+                        </p>
+                    </div>
+
+                    <!-- Sidebar d'illustration conceptuelle -->
+                    <div class="about-vision-mission">
+
+                        <div class="vision-card" style="border-left: 4px solid var(--primary-color); background-color: var(--white);">
+                            <h3 style="color: var(--text-white);">Notre Équipement Atelier</h3>
+                            <p style="margin-top: 1rem; line-height: 1.8;">
+                                🖨️ Imprimantes 3D PLA / ABS / TPU<br>
+                                🔥 Stations de brasage CMS et air chaud<br>
+                                🧪 Oscilloscopes et générateurs de signaux<br>
+                                ⚡ Outillage d'électricien certifié<br>
+                                🔩 Fraiseuse numérique CNC de précision
+                            </p>
+                        </div>
+                        
+                        <div class="skills-highlight" style="margin-top: 1rem;">
+                            <span class="skill-tag" style="border-color: var(--primary-color); color: var(--primary-color);">Soudure de précision</span>
+                            <span class="skill-tag" style="border-color: var(--primary-color); color: var(--primary-color);">Impression 3D</span>
+                            <span class="skill-tag" style="border-color: var(--primary-color); color: var(--primary-color);">Usinage CNC</span>
+                            <span class="skill-tag" style="border-color: var(--primary-color); color: var(--primary-color);">Câblage armoires</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Responsabilités officielles du Workshop -->
+                <div style="margin-top: 5rem; background: linear-gradient(135deg, rgba(128,0,32,0.05) 0%, transparent 100%); border: 1px solid rgba(128,0,32,0.15); border-radius: 16px; padding: 2.5rem;">
+                    <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-white);">📋 Responsabilités officielles du Pôle WORKSHOP</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 0.7rem;">
+                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(128,0,32,0.2); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--primary-color); background: rgba(128,0,32,0.06);">🏭 Fabrication</span>
+                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(128,0,32,0.2); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--primary-color); background: rgba(128,0,32,0.06);">🔧 Assemblage</span>
+                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(128,0,32,0.2); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--primary-color); background: rgba(128,0,32,0.06);">📍 Installation</span>
+                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(128,0,32,0.2); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--primary-color); background: rgba(128,0,32,0.06);">🛡️ Maintenance</span>
+                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(128,0,32,0.2); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--primary-color); background: rgba(128,0,32,0.06);">🔩 Réparation</span>
+                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(128,0,32,0.2); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--primary-color); background: rgba(128,0,32,0.06);">🔗 Intégration des systèmes</span>
+                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(128,0,32,0.2); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--primary-color); background: rgba(128,0,32,0.06);">🚀 Mise en service</span>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 3rem;">
+                    <a href="labo.html" class="btn btn-secondary">← Visiter le Labo</a>
+                    <a href="expertises.html" class="btn btn-primary" style="margin-left: 1rem; background-color: var(--primary-color);">Nos Expertises</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+                </a>
+                <p class="footer-desc">Laboratoire et Atelier des Innovations Technologiques. Recherche, Conception, Prototypage et Maintenance.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="labo.html">Le Labo</a></li>
+                    <li><a href="atelier.html">L'Atelier</a></li>
+                    <li><a href="expertises.html">Expertises</a></li>
+                    <li><a href="boutique.html">Boutique</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contactez-nous</h4>
+                <ul>
+                    <li>
+                        <span class="footer-contact-icon">📱</span>
+                        <a href="https://wa.me/243993676906" target="_blank">WhatsApp : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+243993676906">Tél : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">✉️</span>
+                        <a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📍</span>
+                        <span>Goma, RDC</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Heures d'ouverture</h4>
+                <p>Lundi - Vendredi : 8h00 - 17h00</p>
+                <p>Samedi : 9h00 - 14h00</p>
+                <p class="status-open">Atelier ouvert aux visites</p>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--border-color); margin-top: 2rem;">
+            <p class="copyright" style="margin: 0;">&copy; 2026 L.A.I. TECH. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- Scripts Google Translate (Custom UI) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr', 
+                includedLanguages: 'en,fr', 
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function toggleLanguage() {
+            var currentLang = localStorage.getItem('lai_tech_lang') || 'fr';
+            var targetLang = currentLang === 'fr' ? 'en' : 'fr';
+            changeLanguage(targetLang);
+        }
+
+        function changeLanguage(langCode) {
+            var selectField = document.querySelector("#google_translate_element select");
+            if (!selectField) {
+                setTimeout(() => changeLanguage(langCode), 500);
+                return;
+            }
+            
+            for(var i=0; i < selectField.options.length; i++){
+                if(selectField.options[i].value == langCode){
+                    selectField.selectedIndex = i;
+                    var event = new Event('change');
+                    selectField.dispatchEvent(event);
+                    break;
+                }
+            }
+
+            // Update UI button
+            var btn = document.getElementById('langToggleBtn');
+            if (btn) {
+                btn.textContent = langCode === 'fr' ? 'EN' : 'FR';
+            }
+            
+            localStorage.setItem('lai_tech_lang', langCode);
+        }
+
+        // Prevent Google Translate Banner
+        const hideGoogleTranslate = () => {
+            document.body.style.top = '0px';
+            const banner = document.querySelector('.goog-te-banner-frame');
+            if (banner) banner.style.display = 'none';
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const savedLang = localStorage.getItem('lai_tech_lang');
+                if(savedLang && savedLang === 'en') {
+                    changeLanguage('en');
+                } else {
+                    var btn = document.getElementById('langToggleBtn');
+                    if (btn) btn.textContent = 'EN';
+                }
+                setInterval(hideGoogleTranslate, 100); // Aggressively hide the banner
+            }, 1000);
+        });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

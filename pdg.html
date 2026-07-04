@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le PDG - L.A.I. TECH</title>
+    <meta name="description" content="Découvrez le message de Bahati Kasongo Josue, Fondateur et Président Directeur Général de L.A.I. TECH.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
+    <style>
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 2rem;
+        }
+        .team-card {
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            text-align: center;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .team-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-premium);
+            border-color: rgba(128, 0, 32, 0.15);
+        }
+        .team-avatar-wrapper {
+            width: 80px;
+            height: 80px;
+            margin-bottom: 1.5rem;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .team-avatar {
+            width: 100%;
+            height: 100%;
+        }
+        .team-card h3 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--text-white);
+            margin-bottom: 0.4rem;
+        }
+        .team-role {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .team-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        @media (max-width: 992px) {
+            .cv-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+        }
+    </style>
+
+    <!-- Anti Google Translate Banner -->
+    <style>
+        body { top: 0 !important; }
+        .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame { display: none !important; }
+        .goog-tooltip, .goog-tooltip:hover { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+        #goog-gt-tt, .VIpgJd-ZVi9od-ORHb-OEVmcd, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc { display: none !important; }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- Header / Barre de navigation -->
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.png?v=6" alt="L.A.I. TECH Logo" class="logo-img">
+                <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+            </a>
+
+            <!-- Google Translate Hidden Element -->
+            <div id="google_translate_element" style="display:none;"></div>
+            
+            <!-- Custom Language Toggle -->
+            <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">EN</button>
+
+            <nav id="primary-navigation" class="primary-navigation">
+                <ul class="nav-list">
+                    <li class="has-dropdown">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#hero">Héro</a></li>
+                            <li><a href="index.html#services">Domaines d'Expertise</a></li>
+                            <li><a href="index.html#valeurs">Nos Valeurs</a></li>
+                            <li><a href="index.html#gammes">Gammes de Produits</a></li>
+                            <li><a href="index.html#vision">Vision & Mission</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="labo.html" class="nav-link">Le Labo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="labo.html">Présentation</a></li>
+                            <li><a href="labo.html#recherche">Recherche & Développement</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="atelier.html" class="nav-link">L'Atelier</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="atelier.html">Présentation</a></li>
+                            <li><a href="atelier.html#conception">Prototypage & Fabrication</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="expertises.html" class="nav-link">Expertises</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="expertises.html">Toutes nos Expertises</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="boutique.html" class="nav-link">Boutique</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="boutique.html#shop">Équipements & Composants</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="apropos.html" class="nav-link">À Propos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="apropos.html#about">Qui sommes-nous ?</a></li>
+                            <li><a href="apropos.html#domaines">Domaines d'Activité</a></li>
+                            <li><a href="apropos.html#organisation">Organisation</a></li>
+                            <li><a href="apropos.html#produits">Gammes de Produits</a></li>
+                            <li><a href="apropos.html#objectifs">Objectifs</a></li>
+                            <li><a href="apropos.html#identite">Identité & Philosophie</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="pdg.html" class="nav-link active">Le PDG</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pdg.html#pdg">Mot du PDG</a></li>
+                            <li><a href="pdg.html#pdg-cv">Curriculum Vitae</a></li>
+                            <li><a href="pdg.html#pdg-team">L'Équipe L.A.I. TECH</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="contact.html" class="nav-link btn-nav">Contact</a>
+                        <ul class="dropdown-menu" style="left: auto; right: 0;">
+                            <li><a href="contact.html#contact">Formulaire de Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <section id="pdg" class="pdg-section" style="background-color: var(--bg-dark-secondary); padding: 5rem 0;">
+            <div class="container">
+                <div class="pdg-card">
+                    <div class="pdg-image-container">
+                        <img src="assets/images/pdg.jpg" alt="Bahati Kasongo Josue, PDG de L.A.I. TECH" class="pdg-img">
+                        <div class="pdg-badge">Fondateur &amp; PDG</div>
+                    </div>
+                    <div class="pdg-quote-content">
+                        <span class="quote-icon">"</span>
+                        <p class="pdg-quote">Chez L.A.I. TECH, nous sommes convaincus que l'avenir industriel et technologique de l'Afrique repose sur notre capacité à concevoir nos propres solutions. Notre objectif est de transformer chaque idée en une technologie utile, fiable et accessible, tout en formant la prochaine génération d'ingénieurs et de techniciens.</p>
+                        <div class="pdg-info">
+                            <h3 class="pdg-name">Bahati Kasongo Josue</h3>
+                            <p class="pdg-title">Président Directeur Général, L.A.I. TECH</p>
+                        </div>
+                        <div class="pdg-motto-badge">
+                            « De l'idée à l'innovation, de l'innovation à la réalisation. »
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Philosophie & Vision sous la citation -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 5rem;">
+                    <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🔭</div>
+                        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem;">Notre Vision</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">Devenir une <strong>référence africaine</strong> dans la recherche, le développement et la fabrication de solutions technologiques intelligentes.</p>
+                    </div>
+                    <div style="background: linear-gradient(135deg, rgba(128,0,32,0.05) 0%, transparent 100%); border: 1px solid rgba(128,0,32,0.15); border-radius: 16px; padding: 2rem; text-align: center;">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">💡</div>
+                        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem;">Notre Philosophie</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;"><strong>Chaque problème est une opportunité d'innover.</strong> Identifier, imaginer, développer, tester, puis livrer des produits fiables et accessibles.</p>
+                    </div>
+                    <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+                        <div style="font-size: 2rem; margin-bottom: 1rem;">🎯</div>
+                        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem;">Notre Mission</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">Concevoir et mettre en œuvre des solutions qui <strong>améliorent la qualité de vie</strong> et renforcent la compétitivité des entreprises.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section CV / Parcours -->
+        <section id="pdg-cv" style="padding: 6rem 0; background-color: var(--bg-dark-primary); border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="section-tag">Profil & Parcours</span>
+                    <h2 class="section-title" style="margin-top: 1rem;">Curriculum <span class="accent-color">Vitae</span></h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="cv-grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; align-items: start;">
+                    
+                    <!-- Colonne Gauche : Profil & Compétences -->
+                    <div class="cv-left-col" style="display: flex; flex-direction: column; gap: 2.5rem;">
+                        
+                        <!-- Me concernant -->
+                        <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+                            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--text-white); display: flex; align-items: center; gap: 0.5rem;">
+                                👤 Me Concernant
+                            </h3>
+                            <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.7;">
+                                Étudiant passionné par l’analyse, la consultation et les solutions numériques, je combine des compétences en enquête terrain et en développement web pour résoudre des problématiques concrètes. Autonome, rigoureux et orienté résultats, je m'investis pleinement dans chaque projet en apportant une approche méthodique et innovante.
+                            </p>
+                        </div>
+
+                        <!-- Coordonnées & Langues -->
+                        <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+                            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--text-white);">📞 Coordonnées & Langues</h3>
+                            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.8rem; font-size: 0.95rem; color: var(--text-muted); margin-bottom: 1.5rem; padding: 0;">
+                                <li style="display: flex; align-items: center; gap: 0.8rem;">
+                                    <span style="color: var(--primary-color);">📱</span> <a href="tel:+243993676906" style="color: var(--text-muted); text-decoration: none;">+243 993 676 906</a>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.8rem;">
+                                    <span style="color: var(--primary-color);">✉️</span> <a href="mailto:jkasongo288@gmail.com" style="color: var(--text-muted); text-decoration: none;">jkasongo288@gmail.com</a>
+                                </li>
+                                <li style="display: flex; align-items: center; gap: 0.8rem;">
+                                    <span style="color: var(--primary-color);">📍</span> <span>Goma, RDC</span>
+                                </li>
+                            </ul>
+                            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--text-white);">🗣️ Langues</h4>
+                            <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.9rem; color: var(--text-muted); padding: 0;">
+                                <li>• Français (parlé et écrit)</li>
+                                <li>• Swahili (parlé et écrit)</li>
+                                <li>• Anglais (notions de base)</li>
+                            </ul>
+                        </div>
+
+                        <!-- Compétences & Intérêts -->
+                        <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+                            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--text-white);">🛠️ Compétences</h3>
+                            <div style="display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 1.5rem;">
+                                <span style="background: rgba(128,0,32,0.06); border: 1px solid rgba(128,0,32,0.15); color: var(--primary-color); padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600;">Adaptabilité</span>
+                                <span style="background: rgba(128,0,32,0.06); border: 1px solid rgba(128,0,32,0.15); color: var(--primary-color); padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600;">Communication</span>
+                                <span style="background: rgba(128,0,32,0.06); border: 1px solid rgba(128,0,32,0.15); color: var(--primary-color); padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600;">Leadership</span>
+                                <span style="background: rgba(128,0,32,0.06); border: 1px solid rgba(128,0,32,0.15); color: var(--primary-color); padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600;">Apprentissage</span>
+                                <span style="background: rgba(128,0,32,0.06); border: 1px solid rgba(128,0,32,0.15); color: var(--primary-color); padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600;">Analyse &amp; Diagnostic</span>
+                            </div>
+                            <h4 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--text-white);">🎨 Centres d'intérêt</h4>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Lecture, Gymnastique</p>
+                        </div>
+
+                        <!-- Références -->
+                        <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+                            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.2rem; color: var(--text-white);">📑 Références</h3>
+                            <div style="font-size: 0.95rem; color: var(--text-muted);">
+                                <p style="font-weight: 600; color: var(--text-white); margin-bottom: 0.2rem;">ISHARA CHARLES</p>
+                                <p>📱 <a href="tel:+243975418640" style="color: var(--text-muted); text-decoration: none;">+243 975 418 640</a></p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Colonne Droite : Expérience & Éducation -->
+                    <div class="cv-right-col" style="display: flex; flex-direction: column; gap: 2.5rem;">
+                        
+                        <!-- Expérience Professionnelle -->
+                        <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+                            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 2rem; color: var(--text-white); border-bottom: 2px solid var(--border-color); padding-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                                💼 Expérience Professionnelle
+                            </h3>
+                            
+                            <div style="position: relative; padding-left: 2rem; border-left: 2px solid var(--border-color); margin-left: 0.5rem; display: flex; flex-direction: column; gap: 2.5rem;">
+                                
+                                <!-- Expérience 1 -->
+                                <div style="position: relative;">
+                                    <div style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); border: 2px solid var(--white); box-shadow: 0 0 0 4px rgba(128,0,32,0.15);"></div>
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem;">
+                                        <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--text-white);">Stagiaire en consultation &amp; analyse de besoins</h4>
+                                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); background: rgba(128,0,32,0.08); padding: 0.2rem 0.7rem; border-radius: 50px;">Projet académique &amp; perso</span>
+                                    </div>
+                                    <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.6rem; font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+                                        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                            <span style="color: var(--primary-color); font-weight: bold;">•</span>
+                                            <span>Réalisation d’enquêtes de terrain auprès d’utilisateurs cibles pour identifier leurs besoins numériques.</span>
+                                        </li>
+                                        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                            <span style="color: var(--primary-color); font-weight: bold;">•</span>
+                                            <span>Analyse des données collectées pour proposer des solutions adaptées via des interfaces web simples.</span>
+                                        </li>
+                                        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                            <span style="color: var(--primary-color); font-weight: bold;">•</span>
+                                            <span>Mise en œuvre de ces solutions à travers la conception de pages web en HTML/CSS, avec un souci d’ergonomie et d’accessibilité.</span>
+                                        </li>
+                                        <li style="display: flex; align-items: flex-start; gap: 0.5rem;">
+                                            <span style="color: var(--primary-color); font-weight: bold;">•</span>
+                                            <span>Développement de l’esprit critique et de la capacité à résoudre des problèmes concrets en lien avec le contexte local.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Expérience 2 -->
+                                <div style="position: relative;">
+                                    <div style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); border: 2px solid var(--white); box-shadow: 0 0 0 4px rgba(128,0,32,0.15);"></div>
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem;">
+                                        <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--text-white);">Consultant</h4>
+                                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); background: rgba(128,0,32,0.08); padding: 0.2rem 0.7rem; border-radius: 50px;">EPHOD asbl</span>
+                                    </div>
+                                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+                                        Conseil technique et assistance dans la mise en œuvre de projets à fort impact social.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Éducation & Formation -->
+                        <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04);">
+                            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 2rem; color: var(--text-white); border-bottom: 2px solid var(--border-color); padding-bottom: 0.8rem; display: flex; align-items: center; gap: 0.5rem;">
+                                🎓 Éducation &amp; Formation
+                            </h3>
+                            
+                            <div style="position: relative; padding-left: 2rem; border-left: 2px solid var(--border-color); margin-left: 0.5rem; display: flex; flex-direction: column; gap: 2.5rem;">
+                                
+                                <!-- Éducation 1 -->
+                                <div style="position: relative;">
+                                    <div style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); border: 2px solid var(--white); box-shadow: 0 0 0 4px rgba(128,0,32,0.15);"></div>
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem;">
+                                        <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--text-white);">Université Libre du Pays des Grands Lacs</h4>
+                                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); background: rgba(128,0,32,0.08); padding: 0.2rem 0.7rem; border-radius: 50px;">Depuis 2023 – En cours</span>
+                                    </div>
+                                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.5rem;">
+                                        <strong>Génie Informatique / Technologies Numériques</strong>
+                                    </p>
+                                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                                        Acquisition de compétences en algorithmique, programmation, systèmes embarqués et projets numériques. Participation active à des projets intégrant l'analyse des besoins, l'enquête de terrain et le développement de solutions technologiques concrètes.
+                                    </p>
+                                </div>
+
+                                <!-- Éducation 2 -->
+                                <div style="position: relative;">
+                                    <div style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); border: 2px solid var(--white); box-shadow: 0 0 0 4px rgba(128,0,32,0.15);"></div>
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem;">
+                                        <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--text-white);">Institut du Cinquantenaire</h4>
+                                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); background: rgba(128,0,32,0.08); padding: 0.2rem 0.7rem; border-radius: 50px;">2018 - 2023</span>
+                                    </div>
+                                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.5rem;">
+                                        <strong>Diplôme d’État en Électronique</strong>
+                                    </p>
+                                    <p style="font-size: 0.9rem; color: var(--text-muted); line-height: 1.6;">
+                                        Formation technique axée sur l'électronique appliquée, l'analyse des circuits et la logique numérique. Solide base en méthodologie scientifique et en résolution méthodique de problèmes techniques complexes.
+                                    </p>
+                                </div>
+
+                                <!-- Éducation 3 -->
+                                <div style="position: relative;">
+                                    <div style="position: absolute; left: calc(-2rem - 6px); top: 5px; width: 10px; height: 10px; border-radius: 50%; background: var(--primary-color); border: 2px solid var(--white); box-shadow: 0 0 0 4px rgba(128,0,32,0.15);"></div>
+                                    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.8rem;">
+                                        <h4 style="font-size: 1.1rem; font-weight: 700; color: var(--text-white);">Autoformation en développement web</h4>
+                                        <span style="font-size: 0.8rem; font-weight: 700; color: var(--primary-color); background: rgba(128,0,32,0.08); padding: 0.2rem 0.7rem; border-radius: 50px;">Continu</span>
+                                    </div>
+                                    <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.6;">
+                                        Apprentissage autonome des technologies du web modernes (HTML5, CSS3, JavaScript ES6) et des outils de développement.
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Boutons de navigation -->
+                <div style="text-align: center; margin-top: 5rem;">
+                    <a href="apropos.html" class="btn btn-secondary">À Propos de L.A.I. TECH</a>
+                    <a href="expertises.html" class="btn btn-primary" style="margin-left: 1rem;">Voir nos Expertises</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section Équipe / Membres -->
+        <section id="pdg-team" style="padding: 6rem 0; background-color: var(--bg-dark-secondary); border-top: 1px solid var(--border-color);">
+            <div class="container">
+                <div style="text-align: center; margin-bottom: 4rem;">
+                    <span class="section-tag">Notre Force</span>
+                    <h2 class="section-title" style="margin-top: 1rem;">L'Équipe <span class="accent-color">L.A.I. TECH</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle" style="margin-top: 1rem; color: var(--text-muted);">Des experts passionnés unis pour concrétiser vos innovations.</p>
+                </div>
+
+                <div class="team-grid">
+                    
+                    <!-- Membre 1: R&D -->
+                    <div class="team-card">
+                        <div class="team-avatar-wrapper">
+                            <svg viewBox="0 0 100 100" class="team-avatar">
+                                <defs>
+                                    <linearGradient id="grad-lab" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="var(--primary-color)" />
+                                        <stop offset="100%" stop-color="#8b5cf6" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="50" fill="url(#grad-lab)" />
+                                <circle cx="50" cy="40" r="20" fill="rgba(255,255,255,0.85)" />
+                                <path d="M20 85 C20 65, 80 65, 80 85 Z" fill="rgba(255,255,255,0.85)" />
+                            </svg>
+                        </div>
+                        <h3>Prince Malano</h3>
+                        <p class="team-role">Directeur R&amp;D (Pôle LAB)</p>
+                        <p class="team-desc">Expert en systèmes embarqués, robotique avancée et intelligence artificielle appliquée.</p>
+                    </div>
+
+                    <!-- Membre 2: Workshop -->
+                    <div class="team-card">
+                        <div class="team-avatar-wrapper">
+                            <svg viewBox="0 0 100 100" class="team-avatar">
+                                <defs>
+                                    <linearGradient id="grad-workshop" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="var(--accent-cyan)" />
+                                        <stop offset="100%" stop-color="#10b981" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="50" fill="url(#grad-workshop)" />
+                                <circle cx="50" cy="40" r="20" fill="rgba(255,255,255,0.85)" />
+                                <path d="M20 85 C20 65, 80 65, 80 85 Z" fill="rgba(255,255,255,0.85)" />
+                            </svg>
+                        </div>
+                        <h3>Christian Mwamba</h3>
+                        <p class="team-role">Responsable Atelier (Pôle WORKSHOP)</p>
+                        <p class="team-desc">Spécialiste de la fabrication électronique (PCB), intégration de systèmes et maintenance.</p>
+                    </div>
+
+                    <!-- Membre 3: Cloud & Network -->
+                    <div class="team-card">
+                        <div class="team-avatar-wrapper">
+                            <svg viewBox="0 0 100 100" class="team-avatar">
+                                <defs>
+                                    <linearGradient id="grad-cloud" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#3b82f6" />
+                                        <stop offset="100%" stop-color="#06b6d4" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="50" fill="url(#grad-cloud)" />
+                                <circle cx="50" cy="40" r="20" fill="rgba(255,255,255,0.85)" />
+                                <path d="M20 85 C20 65, 80 65, 80 85 Z" fill="rgba(255,255,255,0.85)" />
+                            </svg>
+                        </div>
+                        <h3>Eliezer Kabulo</h3>
+                        <p class="team-role">Ingénieur Cloud, IoT &amp; Réseaux</p>
+                        <p class="team-desc">Architecte des infrastructures de communication et déploiement de solutions connectées IoT.</p>
+                    </div>
+
+                    <!-- Membre 4: Software Dev -->
+                    <div class="team-card">
+                        <div class="team-avatar-wrapper">
+                            <svg viewBox="0 0 100 100" class="team-avatar">
+                                <defs>
+                                    <linearGradient id="grad-software" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#f59e0b" />
+                                        <stop offset="100%" stop-color="#ef4444" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="50" fill="url(#grad-software)" />
+                                <circle cx="50" cy="40" r="20" fill="rgba(255,255,255,0.85)" />
+                                <path d="M20 85 C20 65, 80 65, 80 85 Z" fill="rgba(255,255,255,0.85)" />
+                            </svg>
+                        </div>
+                        <h3>Sarah Kasinga</h3>
+                        <p class="team-role">Développeuse Fullstack &amp; IA</p>
+                        <p class="team-desc">Conception d'applications web, mobiles intelligentes et de plateformes de supervision complexes.</p>
+                    </div>
+
+                    <!-- Membre 5: Admin & Com -->
+                    <div class="team-card">
+                        <div class="team-avatar-wrapper">
+                            <svg viewBox="0 0 100 100" class="team-avatar">
+                                <defs>
+                                    <linearGradient id="grad-admin" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <stop offset="0%" stop-color="#ec4899" />
+                                        <stop offset="100%" stop-color="#8b5cf6" />
+                                    </linearGradient>
+                                </defs>
+                                <circle cx="50" cy="50" r="50" fill="url(#grad-admin)" />
+                                <circle cx="50" cy="40" r="20" fill="rgba(255,255,255,0.85)" />
+                                <path d="M20 85 C20 65, 80 65, 80 85 Z" fill="rgba(255,255,255,0.85)" />
+                            </svg>
+                        </div>
+                        <h3>Naomi Kavira</h3>
+                        <p class="team-role">Responsable Administrative &amp; Comm.</p>
+                        <p class="team-desc">Gestion des opérations commerciales, logistique, relations clients et partenariats stratégiques.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+                </a>
+                <p class="footer-desc">Laboratoire et Atelier des Innovations Technologiques. Recherche, Conception, Prototypage et Maintenance.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="labo.html">Le Labo</a></li>
+                    <li><a href="atelier.html">L'Atelier</a></li>
+                    <li><a href="expertises.html">Expertises</a></li>
+                    <li><a href="boutique.html">Boutique</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="pdg.html">Mot du PDG</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contactez-nous</h4>
+                <ul>
+                    <li>
+                        <span class="footer-contact-icon">📱</span>
+                        <a href="https://wa.me/243993676906" target="_blank">WhatsApp : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+243993676906">Tél : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">✉️</span>
+                        <a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📍</span>
+                        <span>Goma, RDC</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Heures d'ouverture</h4>
+                <p>Lundi - Vendredi : 8h00 - 17h00</p>
+                <p>Samedi : 9h00 - 14h00</p>
+                <p class="status-open">Atelier ouvert aux visites</p>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--border-color); margin-top: 2rem;">
+            <p class="copyright" style="margin: 0;">&copy; 2026 L.A.I. TECH. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- Scripts Google Translate (Custom UI) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr', 
+                includedLanguages: 'en,fr', 
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function toggleLanguage() {
+            var currentLang = localStorage.getItem('lai_tech_lang') || 'fr';
+            var targetLang = currentLang === 'fr' ? 'en' : 'fr';
+            changeLanguage(targetLang);
+        }
+
+        function changeLanguage(langCode) {
+            var selectField = document.querySelector("#google_translate_element select");
+            if (!selectField) {
+                setTimeout(() => changeLanguage(langCode), 500);
+                return;
+            }
+            
+            for(var i=0; i < selectField.options.length; i++){
+                if(selectField.options[i].value == langCode){
+                    selectField.selectedIndex = i;
+                    var event = new Event('change');
+                    selectField.dispatchEvent(event);
+                    break;
+                }
+            }
+
+            // Update UI button
+            var btn = document.getElementById('langToggleBtn');
+            if (btn) {
+                btn.textContent = langCode === 'fr' ? 'EN' : 'FR';
+            }
+            
+            localStorage.setItem('lai_tech_lang', langCode);
+        }
+
+        // Prevent Google Translate Banner
+        const hideGoogleTranslate = () => {
+            document.body.style.top = '0px';
+            const banner = document.querySelector('.goog-te-banner-frame');
+            if (banner) banner.style.display = 'none';
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const savedLang = localStorage.getItem('lai_tech_lang');
+                if(savedLang && savedLang === 'en') {
+                    changeLanguage('en');
+                } else {
+                    var btn = document.getElementById('langToggleBtn');
+                    if (btn) btn.textContent = 'EN';
+                }
+                setInterval(hideGoogleTranslate, 100); // Aggressively hide the banner
+            }, 1000);
+        });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boutique - L.A.I. TECH</title>
+    <meta name="description" content="Achetez vos composants et équipements professionnels directement auprès de L.A.I. TECH. Matériel testé et garanti.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css?v=5">
+
+    <!-- Anti Google Translate Banner -->
+    <style>
+        body { top: 0 !important; }
+        .goog-te-banner-frame, .goog-te-banner-frame.skiptranslate, iframe.goog-te-banner-frame { display: none !important; }
+        .goog-tooltip, .goog-tooltip:hover { display: none !important; }
+        .goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+        #goog-gt-tt, .VIpgJd-ZVi9od-ORHb-OEVmcd, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf, .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc { display: none !important; }
+    </style>
+
+</head>
+<body>
+
+    <header class="main-header" id="header">
+        <div class="header-container">
+            <a href="index.html" class="logo-link">
+                <img src="assets/images/logo.png?v=6" alt="L.A.I. TECH Logo" class="logo-img">
+                <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+            </a>
+
+            <!-- Google Translate Hidden Element -->
+            <div id="google_translate_element" style="display:none;"></div>
+            
+            <!-- Custom Language Toggle -->
+            <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">EN</button>
+
+            <nav id="primary-navigation" class="primary-navigation">
+                <ul class="nav-list">
+                    <li class="has-dropdown">
+                        <a href="index.html" class="nav-link">Accueil</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="index.html#hero">Héro</a></li>
+                            <li><a href="index.html#services">Domaines d'Expertise</a></li>
+                            <li><a href="index.html#valeurs">Nos Valeurs</a></li>
+                            <li><a href="index.html#gammes">Gammes de Produits</a></li>
+                            <li><a href="index.html#vision">Vision & Mission</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="labo.html" class="nav-link">Le Labo</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="labo.html">Présentation</a></li>
+                            <li><a href="labo.html#recherche">Recherche & Développement</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="atelier.html" class="nav-link">L'Atelier</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="atelier.html">Présentation</a></li>
+                            <li><a href="atelier.html#conception">Prototypage & Fabrication</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="expertises.html" class="nav-link">Expertises</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="expertises.html">Toutes nos Expertises</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="boutique.html" class="nav-link active">Boutique</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="boutique.html#shop">Équipements & Composants</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="apropos.html" class="nav-link">À Propos</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="apropos.html#about">Qui sommes-nous ?</a></li>
+                            <li><a href="apropos.html#domaines">Domaines d'Activité</a></li>
+                            <li><a href="apropos.html#organisation">Organisation</a></li>
+                            <li><a href="apropos.html#produits">Gammes de Produits</a></li>
+                            <li><a href="apropos.html#objectifs">Objectifs</a></li>
+                            <li><a href="apropos.html#identite">Identité & Philosophie</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="pdg.html" class="nav-link">Le PDG</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="pdg.html#pdg">Mot du PDG</a></li>
+                            <li><a href="pdg.html#pdg-cv">Curriculum Vitae</a></li>
+                            <li><a href="pdg.html#pdg-team">L'Équipe L.A.I. TECH</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <a href="contact.html" class="nav-link btn-nav">Contact</a>
+                        <ul class="dropdown-menu" style="left: auto; right: 0;">
+                            <li><a href="contact.html#contact">Formulaire de Contact</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+
+            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <section id="shop" class="shop-section">
+            <div class="container">
+                <!-- Filtres -->
+                <div class="shop-filters">
+                    <button class="filter-btn active" data-filter="all">Tous les équipements</button>
+                    <button class="filter-btn" data-filter="elec">Électricité &amp; Énergie</button>
+                    <button class="filter-btn" data-filter="electronique">Électronique &amp; IoT</button>
+                    <button class="filter-btn" data-filter="info">Informatique &amp; Réseaux</button>
+                    <button class="filter-btn" data-filter="proto">Prototypage</button>
+                    <button class="filter-btn" data-filter="construction">Construction</button>
+                    <button class="filter-btn" data-filter="meca">Mécanique</button>
+                    <button class="filter-btn" data-filter="vitrine">🎨 Vitrine &amp; Peinture</button>
+                </div>
+
+                <!-- Grille Produits -->
+                <div class="products-grid">
+                    <!-- Produit 1 -->
+                    <div class="product-card" data-category="electronique">
+                        <div class="product-badge">Populaire</div>
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <rect x="20" y="30" width="80" height="60" rx="6" fill="#00979d"/>
+                                <rect x="30" y="40" width="12" height="12" fill="#333"/>
+                                <line x1="20" y1="45" x2="15" y2="45" stroke="#ccc" stroke-width="2"/>
+                                <line x1="20" y1="52" x2="15" y2="52" stroke="#ccc" stroke-width="2"/>
+                                <rect x="50" y="35" width="40" height="8" fill="#111" rx="1"/>
+                                <circle cx="35" cy="75" r="8" fill="#ffd700"/>
+                                <circle cx="85" cy="75" r="5" fill="#800020"/>
+                                <text x="60" y="80" fill="#fff" font-size="8" font-family="monospace">ARDUINO</text>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Électronique</span>
+                            <h3 class="product-title">Kit d'Initiation Arduino Complet</h3>
+                            <p class="product-desc">Idéal pour débuter en robotique. Comprend carte Arduino Uno, capteurs, LED, câbles et manuel en français.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">45.000 FC</span>
+                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Kit%20d%27Initiation%20Arduino" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 2 -->
+                    <div class="product-card" data-category="electronique">
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <rect x="35" y="25" width="50" height="70" rx="4" fill="#222"/>
+                                <rect x="40" y="35" width="40" height="25" fill="#e0e0e0" rx="2"/>
+                                <rect x="45" y="40" width="30" height="15" fill="#333"/>
+                                <text x="50" y="50" fill="#00f2fe" font-size="6" font-family="monospace">ESP32</text>
+                                <circle cx="45" cy="80" r="3" fill="#800020"/>
+                                <circle cx="75" cy="80" r="3" fill="#4caf50"/>
+                                <path d="M30 35 h5 M30 45 h5 M30 55 h5 M30 65 h5 M30 75 h5 M85 35 h5 M85 45 h5 M85 55 h5 M85 65 h5 M85 75 h5" stroke="#ffd700" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Électronique / IoT</span>
+                            <h3 class="product-title">Module ESP32 NodeMCU Wi-Fi &amp; BT</h3>
+                            <p class="product-desc">Microcontrôleur ultra-puissant doté de connexions sans fil. Idéal pour vos projets d'Internet des Objets (IoT).</p>
+                            <div class="product-price-row">
+                                <span class="product-price">12.500 FC</span>
+                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Module%20ESP32" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 3 -->
+                    <div class="product-card" data-category="elec">
+                        <div class="product-badge promo">-10%</div>
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <rect x="25" y="20" width="70" height="80" rx="3" fill="#1a237e" stroke="#cfd8dc" stroke-width="3"/>
+                                <line x1="25" y1="40" x2="95" y2="40" stroke="#cfd8dc" stroke-width="2"/>
+                                <line x1="25" y1="60" x2="95" y2="60" stroke="#cfd8dc" stroke-width="2"/>
+                                <line x1="25" y1="80" x2="95" y2="80" stroke="#cfd8dc" stroke-width="2"/>
+                                <line x1="42" y1="20" x2="42" y2="100" stroke="#cfd8dc" stroke-width="2"/>
+                                <line x1="60" y1="20" x2="60" y2="100" stroke="#cfd8dc" stroke-width="2"/>
+                                <line x1="77" y1="20" x2="77" y2="100" stroke="#cfd8dc" stroke-width="2"/>
+                                <circle cx="60" cy="5" r="4" fill="#ffd700"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Énergie Renouvelable</span>
+                            <h3 class="product-title">Panneau Solaire Monocristallin 150W</h3>
+                            <p class="product-desc">Rendement optimal même en cas de faible ensoleillement. Cellules de haute qualité, résistant aux intempéries.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">180.000 FC</span>
+                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Panneau%20Solaire%20150W" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 4 -->
+                    <div class="product-card" data-category="elec">
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <rect x="35" y="20" width="50" height="80" rx="8" fill="#800020"/>
+                                <rect x="42" y="28" width="36" height="20" fill="#e0f7fa" rx="2"/>
+                                <text x="46" y="42" fill="#000" font-size="10" font-family="monospace">220.5 V</text>
+                                <circle cx="60" cy="70" r="14" fill="#263238" stroke="#ffd700" stroke-width="2"/>
+                                <line x1="60" y1="70" x2="60" y2="60" stroke="#800020" stroke-width="3" stroke-linecap="round"/>
+                                <circle cx="48" cy="92" r="3" fill="#000"/>
+                                <circle cx="60" cy="92" r="3" fill="#000"/>
+                                <circle cx="72" cy="92" r="3" fill="#800020"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Électricité</span>
+                            <h3 class="product-title">Multimètre Numérique Automatique</h3>
+                            <p class="product-desc">Pour mesurer tension, courant, résistance et continuité. Écran rétroéclairé, boîtier anti-choc et sondes incluses.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">65.000 FC</span>
+                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Multimetre%20Numerique" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 5 -->
+                    <div class="product-card" data-category="info">
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <rect x="20" y="70" width="80" height="15" rx="3" fill="#333"/>
+                                <circle cx="30" cy="77" r="2" fill="#4caf50"/>
+                                <circle cx="40" cy="77" r="2" fill="#4caf50"/>
+                                <circle cx="50" cy="77" r="2" fill="#4caf50"/>
+                                <circle cx="90" cy="77" r="2" fill="#00f2fe"/>
+                                <line x1="30" y1="70" x2="15" y2="25" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="90" y1="70" x2="105" y2="25" stroke="#222" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M 40 60 A 20 20 0 0 1 80 60" stroke="#00f2fe" stroke-width="1.5" fill="none" stroke-dasharray="4 2"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Informatique / Réseaux</span>
+                            <h3 class="product-title">Routeur Wi-Fi 6 Gigabit Double Bande</h3>
+                            <p class="product-desc">Débit ultra-rapide pour réseaux d'entreprise ou domestiques. Excellente couverture avec 4 antennes amplifiées.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">110.000 FC</span>
+                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Routeur%20Wi-Fi%206" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 6 -->
+                    <div class="product-card" data-category="proto">
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <circle cx="60" cy="60" r="35" fill="none" stroke="#800020" stroke-width="8"/>
+                                <circle cx="60" cy="60" r="35" fill="none" stroke="#111" stroke-width="16" stroke-dasharray="8 6"/>
+                                <circle cx="60" cy="60" r="22" fill="#fff" stroke="#ccc" stroke-width="2"/>
+                                <circle cx="60" cy="60" r="10" fill="#222"/>
+                                <rect x="58" y="25" width="4" height="70" fill="#fff" opacity="0.3"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Prototypage / Impression 3D</span>
+                            <h3 class="product-title">Bobine Filament PLA Premium 1kg</h3>
+                            <p class="product-desc">Filament PLA de diamètre 1.75mm de haute qualité. Disponible en noir, blanc, bleu, rouge et gris pour vos prototypes.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">48.000 FC</span>
+                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20la%20Bobine%20de%20Filament%20PLA" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 7 -->
+                    <div class="product-card" data-category="construction">
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <rect x="30" y="40" width="60" height="40" fill="#e0e0e0" stroke="#757575" stroke-width="3"/>
+                                <path d="M60 20 L95 40 L25 40 Z" fill="#800020"/>
+                                <rect x="50" y="60" width="20" height="20" fill="#fff" stroke="#757575" stroke-width="2"/>
+                                <circle cx="55" cy="70" r="2" fill="#000"/>
+                                <line x1="40" y1="50" x2="50" y2="50" stroke="#757575" stroke-width="2"/>
+                                <line x1="70" y1="50" x2="80" y2="50" stroke="#757575" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Construction</span>
+                            <h3 class="product-title">Télémètre Laser Professionnel</h3>
+                            <p class="product-desc">Mesure précise jusqu'à 100m. Idéal pour la topographie et l'architecture. Boîtier robuste et étanche.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">85.000 FC</span>
+                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Telemetre%20Laser" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 8 -->
+                    <div class="product-card" data-category="meca">
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <circle cx="60" cy="60" r="25" fill="none" stroke="#607d8b" stroke-width="8" stroke-dasharray="10 5"/>
+                                <circle cx="60" cy="60" r="15" fill="#cfd8dc" stroke="#455a64" stroke-width="3"/>
+                                <circle cx="60" cy="60" r="5" fill="#333"/>
+                                <path d="M20 100 L40 60 L30 50 Z" fill="#b0bec5"/>
+                                <path d="M100 100 L80 60 L90 50 Z" fill="#b0bec5"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Mécanique</span>
+                            <h3 class="product-title">Kit d'Outils Mécanique 120 Pièces</h3>
+                            <p class="product-desc">Ensemble complet d'outils pour la maintenance mécanique et l'usinage. Clés, douilles et embouts en acier Cr-V.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">150.000 FC</span>
+                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Kit%20d%27Outils%20Mecanique" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <!-- Produit 9 : Vitrine -->
+                    <div class="product-card" data-category="vitrine">
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <!-- Enseigne lumineuse LED -->
+                                <rect x="15" y="35" width="90" height="55" rx="4" fill="#1a1a2e" stroke="#800020" stroke-width="2"/>
+                                <rect x="20" y="40" width="80" height="45" rx="2" fill="#0d0d1a"/>
+                                <!-- LED border glow -->
+                                <rect x="22" y="42" width="76" height="41" rx="1" fill="none" stroke="#e91e8c" stroke-width="1" opacity="0.7"/>
+                                <!-- LAI TECH text sim -->
+                                <rect x="32" y="52" width="55" height="6" rx="2" fill="#e91e8c" opacity="0.85"/>
+                                <rect x="38" y="63" width="44" height="4" rx="1" fill="#800020" opacity="0.7"/>
+                                <!-- Mounting feet -->
+                                <rect x="45" y="90" width="8" height="8" rx="1" fill="#555"/>
+                                <rect x="67" y="90" width="8" height="8" rx="1" fill="#555"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Vitrine &amp; Peinture</span>
+                            <h3 class="product-title">Enseigne LED Lumineuse Personnalisée</h3>
+                            <p class="product-desc">Enseigne lumineuse à LED avec votre logo ou texte, boitier aluminium robuste. Visible de jour comme de nuit.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">120.000 FC</span>
+                                <a href="https://wa.me/243993676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20une%20Enseigne%20LED" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 10 : Peinture -->
+                    <div class="product-card" data-category="vitrine">
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <!-- Paint roller -->
+                                <rect x="50" y="25" width="8" height="40" rx="2" fill="#78909c"/>
+                                <!-- Roller body -->
+                                <rect x="30" y="40" width="48" height="22" rx="8" fill="#800020"/>
+                                <rect x="32" y="42" width="44" height="18" rx="6" fill="#b71c1c"/>
+                                <!-- Paint drips -->
+                                <ellipse cx="38" cy="65" rx="3" ry="5" fill="#800020" opacity="0.7"/>
+                                <ellipse cx="55" cy="67" rx="2" ry="6" fill="#800020" opacity="0.8"/>
+                                <ellipse cx="70" cy="64" rx="2.5" ry="4" fill="#800020" opacity="0.6"/>
+                                <!-- Paint tray -->
+                                <rect x="20" y="85" width="80" height="14" rx="3" fill="#e0e0e0"/>
+                                <rect x="22" y="87" width="76" height="10" rx="2" fill="#ef9a9a" opacity="0.6"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Vitrine &amp; Peinture</span>
+                            <h3 class="product-title">Service Peinture Commerciale &amp; Déco</h3>
+                            <p class="product-desc">Peinture professionnelle de facades, bureaux et commerces. Finitions impeccables, peintures haute qualité résistantes aux intempéries.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">Sur devis</span>
+                                <a href="https://wa.me/243993676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20un%20devis%20peinture" target="_blank" class="btn btn-sm btn-order">Devis gratuit</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Produit 11 : Vitrine display -->
+                    <div class="product-card" data-category="vitrine">
+                        <div class="product-image">
+                            <svg viewBox="0 0 120 120" class="product-svg">
+                                <!-- Display case / vitrine -->
+                                <rect x="20" y="30" width="80" height="70" rx="4" fill="#e3f2fd" stroke="#90caf9" stroke-width="2" opacity="0.9"/>
+                                <!-- Glass reflection -->
+                                <rect x="25" y="35" width="12" height="58" rx="2" fill="white" opacity="0.4"/>
+                                <!-- Shelf lines -->
+                                <line x1="20" y1="65" x2="100" y2="65" stroke="#90caf9" stroke-width="1.5" opacity="0.7"/>
+                                <line x1="20" y1="82" x2="100" y2="82" stroke="#90caf9" stroke-width="1.5" opacity="0.7"/>
+                                <!-- Items on shelves (products) -->
+                                <rect x="38" y="45" width="15" height="18" rx="2" fill="#800020" opacity="0.8"/>
+                                <rect x="60" y="48" width="10" height="15" rx="2" fill="#1565c0" opacity="0.7"/>
+                                <rect x="40" y="70" width="20" height="10" rx="2" fill="#2e7d32" opacity="0.7"/>
+                                <rect x="65" y="69" width="12" height="11" rx="2" fill="#f57c00" opacity="0.8"/>
+                                <!-- Base -->
+                                <rect x="18" y="100" width="84" height="8" rx="2" fill="#78909c"/>
+                            </svg>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-cat">Vitrine &amp; Peinture</span>
+                            <h3 class="product-title">Vitrine d'Exposition Commerciale</h3>
+                            <p class="product-desc">Vitrine en aluminium et verre trempé sur mesure pour l'exposition de produits en boutique, show-room ou salon commercial.</p>
+                            <div class="product-price-row">
+                                <span class="product-price">250.000 FC</span>
+                                <a href="https://wa.me/243993676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20une%20Vitrine%20d%27Exposition" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="shop-info-footer">
+                    <p>💡 <em>Vous cherchez un composant spécifique ? <a href="contact.html">Contactez notre atelier</a>, nous pouvons vous le fournir sur commande.</em></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bandeau final institutionnel -->
+        <section style="padding: 5rem 0; background: var(--bg-dark-primary); text-align: center;">
+            <div class="container">
+                <div style="max-width: 700px; margin: 0 auto;">
+                    <div style="font-size: 1.8rem; margin-bottom: 1rem;">💡</div>
+                    <h2 style="font-size: 1.8rem; font-weight: 800; margin-bottom: 1rem;">De l’idée à l’innovation,<br><span class="accent-color">de l’innovation à la réalisation.</span></h2>
+                    <p style="color: var(--text-muted); margin-bottom: 2.5rem; font-size: 1rem; line-height: 1.8;">
+                        L.A.I. TECH conçoit, fabrique et maintient des solutions technologiques modernes pour les particuliers, les entreprises, les industries et le secteur agricole.
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="contact.html" class="btn btn-primary" style="padding: 1rem 2.5rem;">Nous contacter</a>
+                        <a href="apropos.html" class="btn btn-secondary" style="padding: 1rem 2.5rem; border-color: var(--border-color); color: var(--text-muted);">Découvrir L.A.I. TECH</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo-link">
+                    <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
+                </a>
+                <p class="footer-desc">Laboratoire et Atelier des Innovations Technologiques. Recherche, Conception, Prototypage et Maintenance.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="labo.html">Le Labo</a></li>
+                    <li><a href="atelier.html">L'Atelier</a></li>
+                    <li><a href="expertises.html">Expertises</a></li>
+                    <li><a href="boutique.html">Boutique</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="pdg.html">Mot du PDG</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contactez-nous</h4>
+                <ul>
+                    <li>
+                        <span class="footer-contact-icon">📱</span>
+                        <a href="https://wa.me/243993676906" target="_blank">WhatsApp : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+243993676906">Tél : +243 993 676 906</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">✉️</span>
+                        <a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a>
+                    </li>
+                    <li>
+                        <span class="footer-contact-icon">📍</span>
+                        <span>Goma, RDC</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer-hours">
+                <h4>Heures d'ouverture</h4>
+                <p>Lundi - Vendredi : 8h00 - 17h00</p>
+                <p>Samedi : 9h00 - 14h00</p>
+                <p class="status-open">Atelier ouvert aux visites</p>
+            </div>
+        </div>
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid var(--border-color); margin-top: 2rem;">
+            <p class="copyright" style="margin: 0;">&copy; 2026 L.A.I. TECH. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/app.js"></script>
+
+    <!-- Scripts Google Translate (Custom UI) -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'fr', 
+                includedLanguages: 'en,fr', 
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+
+        function toggleLanguage() {
+            var currentLang = localStorage.getItem('lai_tech_lang') || 'fr';
+            var targetLang = currentLang === 'fr' ? 'en' : 'fr';
+            changeLanguage(targetLang);
+        }
+
+        function changeLanguage(langCode) {
+            var selectField = document.querySelector("#google_translate_element select");
+            if (!selectField) {
+                setTimeout(() => changeLanguage(langCode), 500);
+                return;
+            }
+            
+            for(var i=0; i < selectField.options.length; i++){
+                if(selectField.options[i].value == langCode){
+                    selectField.selectedIndex = i;
+                    var event = new Event('change');
+                    selectField.dispatchEvent(event);
+                    break;
+                }
+            }
+
+            // Update UI button
+            var btn = document.getElementById('langToggleBtn');
+            if (btn) {
+                btn.textContent = langCode === 'fr' ? 'EN' : 'FR';
+            }
+            
+            localStorage.setItem('lai_tech_lang', langCode);
+        }
+
+        // Prevent Google Translate Banner
+        const hideGoogleTranslate = () => {
+            document.body.style.top = '0px';
+            const banner = document.querySelector('.goog-te-banner-frame');
+            if (banner) banner.style.display = 'none';
+        };
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const savedLang = localStorage.getItem('lai_tech_lang');
+                if(savedLang && savedLang === 'en') {
+                    changeLanguage('en');
+                } else {
+                    var btn = document.getElementById('langToggleBtn');
+                    if (btn) btn.textContent = 'EN';
+                }
+                setInterval(hideGoogleTranslate, 100); // Aggressively hide the banner
+            }, 1000);
+        });
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+</body>
+</html>

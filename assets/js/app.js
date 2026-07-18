@@ -146,7 +146,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 submitBtn.disabled = false;
                 submitBtn.textContent = originalBtnText;
 
-                formFeedback.textContent = `Merci ${name}, votre message a bien été envoyé ! Notre équipe ou M. Josue Kasongo (PDG) vous contactera très rapidement.`;
+                formFeedback.textContent = `Merci ${name}, votre message a bien été envoyé ! Notre équipe L.A.I. TECH vous contactera très rapidement.`;
                 formFeedback.className = 'form-feedback success';
                 
                 // Réinitialiser le formulaire
@@ -155,6 +155,48 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Faire disparaître le message de succès après 8 secondes
                 setTimeout(() => {
                     formFeedback.className = 'form-feedback hidden';
+                }, 8000);
+
+            }, 1500);
+        });
+    }
+
+    // Formulaire Boîte à Idées & Co-Innovation
+    const ideaForm = document.getElementById('ideaForm');
+    const submitIdeaBtn = document.getElementById('submitIdeaBtn');
+    const ideaFeedback = document.getElementById('ideaFeedback');
+
+    if (ideaForm) {
+        ideaForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            // Mettre le bouton en mode chargement
+            const originalBtnText = submitIdeaBtn.textContent;
+            submitIdeaBtn.disabled = true;
+            submitIdeaBtn.textContent = 'Soumission en cours...';
+            
+            // Cacher les anciens retours
+            ideaFeedback.className = 'form-feedback hidden';
+
+            // Récupérer les données du formulaire
+            const name = document.getElementById('idea-name').value;
+            const sectorSelect = document.getElementById('idea-sector');
+            const sector = sectorSelect.options[sectorSelect.selectedIndex].text;
+
+            // Simulation d'un envoi AJAX (1.5 seconde de délai)
+            setTimeout(() => {
+                submitIdeaBtn.disabled = false;
+                submitIdeaBtn.textContent = originalBtnText;
+
+                ideaFeedback.textContent = `Merci ${name} ! Votre idée/problème concernant le secteur "${sector}" a été reçue avec succès dans notre boîte à idées. Notre équipe L.A.I. TECH l'analysera pour concevoir notre prochain produit intelligent.`;
+                ideaFeedback.className = 'form-feedback success';
+                
+                // Réinitialiser le formulaire
+                ideaForm.reset();
+
+                // Faire disparaître le message de succès après 8 secondes
+                setTimeout(() => {
+                    ideaFeedback.className = 'form-feedback hidden';
                 }, 8000);
 
             }, 1500);

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=5">
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
 
     <!-- Anti Google Translate Banner -->
     <style>
@@ -32,8 +32,13 @@
             <!-- Google Translate Hidden Element -->
             <div id="google_translate_element" style="display:none;"></div>
             
-            <!-- Custom Language Toggle -->
-            <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">EN</button>
+                        <!-- Custom Language Toggle -->
+            <div class="lang-selector">
+                <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">
+
+                    <span id="langBtnText">EN</span>
+                </button>
+            </div>
 
             <nav id="primary-navigation" class="primary-navigation">
                 <ul class="nav-list">
@@ -44,21 +49,21 @@
                             <li><a href="index.html#services">Domaines d'Expertise</a></li>
                             <li><a href="index.html#valeurs">Nos Valeurs</a></li>
                             <li><a href="index.html#gammes">Gammes de Produits</a></li>
-                            <li><a href="index.html#vision">Vision & Mission</a></li>
+                            <li><a href="index.html#vision">Vision et Mission</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="labo.html" class="nav-link">Le Labo</a>
                         <ul class="dropdown-menu">
                             <li><a href="labo.html">Présentation</a></li>
-                            <li><a href="labo.html#recherche">Recherche & Développement</a></li>
+                            <li><a href="labo.html#recherche">Recherche et Développement</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="atelier.html" class="nav-link">L'Atelier</a>
                         <ul class="dropdown-menu">
                             <li><a href="atelier.html">Présentation</a></li>
-                            <li><a href="atelier.html#conception">Prototypage & Fabrication</a></li>
+                            <li><a href="atelier.html#conception">Prototypage et Fabrication</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -70,7 +75,7 @@
                     <li class="has-dropdown">
                         <a href="boutique.html" class="nav-link active">Boutique</a>
                         <ul class="dropdown-menu">
-                            <li><a href="boutique.html#shop">Équipements & Composants</a></li>
+                            <li><a href="boutique.html#shop">Équipements et Composants</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -81,15 +86,14 @@
                             <li><a href="apropos.html#organisation">Organisation</a></li>
                             <li><a href="apropos.html#produits">Gammes de Produits</a></li>
                             <li><a href="apropos.html#objectifs">Objectifs</a></li>
-                            <li><a href="apropos.html#identite">Identité & Philosophie</a></li>
+                            <li><a href="apropos.html#identite">Identité et Philosophie</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="pdg.html" class="nav-link">Le PDG</a>
+                        <a href="membres.html" class="nav-link">Membres</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pdg.html#pdg">Mot du PDG</a></li>
-                            <li><a href="pdg.html#pdg-cv">Curriculum Vitae</a></li>
-                            <li><a href="pdg.html#pdg-team">L'Équipe L.A.I. TECH</a></li>
+                            <li><a href="membres.html#fondateurs">Les Fondateurs</a></li>
+                            <li><a href="membres.html#equipe">L'Équipe L.A.I. TECH</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -116,13 +120,13 @@
                 <!-- Filtres -->
                 <div class="shop-filters">
                     <button class="filter-btn active" data-filter="all">Tous les équipements</button>
-                    <button class="filter-btn" data-filter="elec">Électricité &amp; Énergie</button>
-                    <button class="filter-btn" data-filter="electronique">Électronique &amp; IoT</button>
-                    <button class="filter-btn" data-filter="info">Informatique &amp; Réseaux</button>
+                    <button class="filter-btn" data-filter="elec">Électricité et Énergie</button>
+                    <button class="filter-btn" data-filter="electronique">Électronique et IoT</button>
+                    <button class="filter-btn" data-filter="info">Informatique et Réseaux</button>
                     <button class="filter-btn" data-filter="proto">Prototypage</button>
                     <button class="filter-btn" data-filter="construction">Construction</button>
                     <button class="filter-btn" data-filter="meca">Mécanique</button>
-                    <button class="filter-btn" data-filter="vitrine">🎨 Vitrine &amp; Peinture</button>
+                    <button class="filter-btn" data-filter="vitrine">🎨 Vitrine et Peinture</button>
                 </div>
 
                 <!-- Grille Produits -->
@@ -148,7 +152,7 @@
                             <p class="product-desc">Idéal pour débuter en robotique. Comprend carte Arduino Uno, capteurs, LED, câbles et manuel en français.</p>
                             <div class="product-price-row">
                                 <span class="product-price">45.000 FC</span>
-                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Kit%20d%27Initiation%20Arduino" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Kit%20d%27Initiation%20Arduino" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -168,11 +172,11 @@
                         </div>
                         <div class="product-info">
                             <span class="product-cat">Électronique / IoT</span>
-                            <h3 class="product-title">Module ESP32 NodeMCU Wi-Fi &amp; BT</h3>
+                            <h3 class="product-title">Module ESP32 NodeMCU Wi-Fi et BT</h3>
                             <p class="product-desc">Microcontrôleur ultra-puissant doté de connexions sans fil. Idéal pour vos projets d'Internet des Objets (IoT).</p>
                             <div class="product-price-row">
                                 <span class="product-price">12.500 FC</span>
-                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Module%20ESP32" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Module%20ESP32" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -198,7 +202,7 @@
                             <p class="product-desc">Rendement optimal même en cas de faible ensoleillement. Cellules de haute qualité, résistant aux intempéries.</p>
                             <div class="product-price-row">
                                 <span class="product-price">180.000 FC</span>
-                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Panneau%20Solaire%20150W" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Panneau%20Solaire%20150W" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -223,7 +227,7 @@
                             <p class="product-desc">Pour mesurer tension, courant, résistance et continuité. Écran rétroéclairé, boîtier anti-choc et sondes incluses.</p>
                             <div class="product-price-row">
                                 <span class="product-price">65.000 FC</span>
-                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Multimetre%20Numerique" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Multimetre%20Numerique" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -248,7 +252,7 @@
                             <p class="product-desc">Débit ultra-rapide pour réseaux d'entreprise ou domestiques. Excellente couverture avec 4 antennes amplifiées.</p>
                             <div class="product-price-row">
                                 <span class="product-price">110.000 FC</span>
-                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Routeur%20Wi-Fi%206" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Routeur%20Wi-Fi%206" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -270,7 +274,7 @@
                             <p class="product-desc">Filament PLA de diamètre 1.75mm de haute qualité. Disponible en noir, blanc, bleu, rouge et gris pour vos prototypes.</p>
                             <div class="product-price-row">
                                 <span class="product-price">48.000 FC</span>
-                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20la%20Bobine%20de%20Filament%20PLA" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20la%20Bobine%20de%20Filament%20PLA" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -293,7 +297,7 @@
                             <p class="product-desc">Mesure précise jusqu'à 100m. Idéal pour la topographie et l'architecture. Boîtier robuste et étanche.</p>
                             <div class="product-price-row">
                                 <span class="product-price">85.000 FC</span>
-                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Telemetre%20Laser" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Telemetre%20Laser" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -315,7 +319,7 @@
                             <p class="product-desc">Ensemble complet d'outils pour la maintenance mécanique et l'usinage. Clés, douilles et embouts en acier Cr-V.</p>
                             <div class="product-price-row">
                                 <span class="product-price">150.000 FC</span>
-                                <a href="https://wa.me/243000000000?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Kit%20d%27Outils%20Mecanique" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20le%20Kit%20d%27Outils%20Mecanique" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -339,12 +343,12 @@
                             </svg>
                         </div>
                         <div class="product-info">
-                            <span class="product-cat">Vitrine &amp; Peinture</span>
+                            <span class="product-cat">Vitrine et Peinture</span>
                             <h3 class="product-title">Enseigne LED Lumineuse Personnalisée</h3>
                             <p class="product-desc">Enseigne lumineuse à LED avec votre logo ou texte, boitier aluminium robuste. Visible de jour comme de nuit.</p>
                             <div class="product-price-row">
                                 <span class="product-price">120.000 FC</span>
-                                <a href="https://wa.me/243993676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20une%20Enseigne%20LED" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20une%20Enseigne%20LED" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -368,12 +372,12 @@
                             </svg>
                         </div>
                         <div class="product-info">
-                            <span class="product-cat">Vitrine &amp; Peinture</span>
-                            <h3 class="product-title">Service Peinture Commerciale &amp; Déco</h3>
+                            <span class="product-cat">Vitrine et Peinture</span>
+                            <h3 class="product-title">Service Peinture Commerciale et Déco</h3>
                             <p class="product-desc">Peinture professionnelle de facades, bureaux et commerces. Finitions impeccables, peintures haute qualité résistantes aux intempéries.</p>
                             <div class="product-price-row">
                                 <span class="product-price">Sur devis</span>
-                                <a href="https://wa.me/243993676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20un%20devis%20peinture" target="_blank" class="btn btn-sm btn-order">Devis gratuit</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20un%20devis%20peinture" target="_blank" class="btn btn-sm btn-order">Devis gratuit</a>
                             </div>
                         </div>
                     </div>
@@ -399,12 +403,12 @@
                             </svg>
                         </div>
                         <div class="product-info">
-                            <span class="product-cat">Vitrine &amp; Peinture</span>
+                            <span class="product-cat">Vitrine et Peinture</span>
                             <h3 class="product-title">Vitrine d'Exposition Commerciale</h3>
                             <p class="product-desc">Vitrine en aluminium et verre trempé sur mesure pour l'exposition de produits en boutique, show-room ou salon commercial.</p>
                             <div class="product-price-row">
                                 <span class="product-price">250.000 FC</span>
-                                <a href="https://wa.me/243993676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20une%20Vitrine%20d%27Exposition" target="_blank" class="btn btn-sm btn-order">Commander</a>
+                                <a href="https://wa.me/243895676906?text=Bonjour%20L.A.I.%20TECH,%20je%20souhaite%20commander%20une%20Vitrine%20d%27Exposition" target="_blank" class="btn btn-sm btn-order">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -451,7 +455,7 @@
                     <li><a href="expertises.html">Expertises</a></li>
                     <li><a href="boutique.html">Boutique</a></li>
                     <li><a href="apropos.html">À Propos</a></li>
-                    <li><a href="pdg.html">Mot du PDG</a></li>
+                    <li><a href="membres.html">Membres et Fondateurs</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -460,15 +464,15 @@
                 <ul>
                     <li>
                         <span class="footer-contact-icon">📱</span>
-                        <a href="https://wa.me/243993676906" target="_blank">WhatsApp : +243 993 676 906</a>
+                        <a href="https://wa.me/243895676906" target="_blank">WhatsApp : +243 895 676 906</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">📞</span>
-                        <a href="tel:+243993676906">Tél : +243 993 676 906</a>
+                        <a href="tel:+243895676906">Tél : +243 895 676 906</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">✉️</span>
-                        <a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a>
+                        <a href="mailto:LAITECH@gmail.com">LAITECH@gmail.com</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">📍</span>
@@ -500,6 +504,7 @@
             }, 'google_translate_element');
         }
 
+        let changeLangRetries = 0;
         function toggleLanguage() {
             var currentLang = localStorage.getItem('lai_tech_lang') || 'fr';
             var targetLang = currentLang === 'fr' ? 'en' : 'fr';
@@ -509,9 +514,15 @@
         function changeLanguage(langCode) {
             var selectField = document.querySelector("#google_translate_element select");
             if (!selectField) {
-                setTimeout(() => changeLanguage(langCode), 500);
+                if (changeLangRetries < 6) {
+                    changeLangRetries++;
+                    setTimeout(() => changeLanguage(langCode), 500);
+                } else {
+                    console.warn("Google Translate element not loaded yet.");
+                }
                 return;
             }
+            changeLangRetries = 0;
             
             for(var i=0; i < selectField.options.length; i++){
                 if(selectField.options[i].value == langCode){
@@ -523,9 +534,9 @@
             }
 
             // Update UI button
-            var btn = document.getElementById('langToggleBtn');
-            if (btn) {
-                btn.textContent = langCode === 'fr' ? 'EN' : 'FR';
+            var btnText = document.getElementById('langBtnText');
+            if (btnText) {
+                btnText.textContent = langCode === 'fr' ? 'EN' : 'FR';
             }
             
             localStorage.setItem('lai_tech_lang', langCode);
@@ -544,8 +555,8 @@
                 if(savedLang && savedLang === 'en') {
                     changeLanguage('en');
                 } else {
-                    var btn = document.getElementById('langToggleBtn');
-                    if (btn) btn.textContent = 'EN';
+                    var btnText = document.getElementById('langBtnText');
+                    if (btnText) btnText.textContent = 'EN';
                 }
                 setInterval(hideGoogleTranslate, 100); // Aggressively hide the banner
             }, 1000);
@@ -555,3 +566,7 @@
 
 </body>
 </html>
+
+
+
+

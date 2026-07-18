@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=5">
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
 
     <!-- Anti Google Translate Banner -->
     <style>
@@ -32,8 +32,13 @@
             <!-- Google Translate Hidden Element -->
             <div id="google_translate_element" style="display:none;"></div>
             
-            <!-- Custom Language Toggle -->
-            <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">EN</button>
+                        <!-- Custom Language Toggle -->
+            <div class="lang-selector">
+                <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">
+
+                    <span id="langBtnText">EN</span>
+                </button>
+            </div>
 
             <nav id="primary-navigation" class="primary-navigation">
                 <ul class="nav-list">
@@ -44,21 +49,21 @@
                             <li><a href="index.html#services">Domaines d'Expertise</a></li>
                             <li><a href="index.html#valeurs">Nos Valeurs</a></li>
                             <li><a href="index.html#gammes">Gammes de Produits</a></li>
-                            <li><a href="index.html#vision">Vision & Mission</a></li>
+                            <li><a href="index.html#vision">Vision et Mission</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="labo.html" class="nav-link">Le Labo</a>
                         <ul class="dropdown-menu">
                             <li><a href="labo.html">Présentation</a></li>
-                            <li><a href="labo.html#recherche">Recherche & Développement</a></li>
+                            <li><a href="labo.html#recherche">Recherche et Développement</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="atelier.html" class="nav-link">L'Atelier</a>
                         <ul class="dropdown-menu">
                             <li><a href="atelier.html">Présentation</a></li>
-                            <li><a href="atelier.html#conception">Prototypage & Fabrication</a></li>
+                            <li><a href="atelier.html#conception">Prototypage et Fabrication</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -70,7 +75,7 @@
                     <li class="has-dropdown">
                         <a href="boutique.html" class="nav-link">Boutique</a>
                         <ul class="dropdown-menu">
-                            <li><a href="boutique.html#shop">Équipements & Composants</a></li>
+                            <li><a href="boutique.html#shop">Équipements et Composants</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -81,15 +86,14 @@
                             <li><a href="apropos.html#organisation">Organisation</a></li>
                             <li><a href="apropos.html#produits">Gammes de Produits</a></li>
                             <li><a href="apropos.html#objectifs">Objectifs</a></li>
-                            <li><a href="apropos.html#identite">Identité & Philosophie</a></li>
+                            <li><a href="apropos.html#identite">Identité et Philosophie</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="pdg.html" class="nav-link">Le PDG</a>
+                        <a href="membres.html" class="nav-link">Membres</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pdg.html#pdg">Mot du PDG</a></li>
-                            <li><a href="pdg.html#pdg-cv">Curriculum Vitae</a></li>
-                            <li><a href="pdg.html#pdg-team">L'Équipe L.A.I. TECH</a></li>
+                            <li><a href="membres.html#fondateurs">Les Fondateurs</a></li>
+                            <li><a href="membres.html#equipe">L'Équipe L.A.I. TECH</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -128,96 +132,117 @@
                 <div class="expertises-grid" style="text-align: left;">
                     <!-- 1. Électricité, Électronique -->
                     <div class="expertise-card" data-index="1">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_elec.png" alt="Électricité, Électronique et Instrumentation" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon red-glow">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14h-2v-2h2v2zm0-4h-2V7h2v5z" fill="currentColor"/><path d="M11 21.9h2c3.4-.4 6-3.2 6.4-6.6l-1.9-.2c-.3 2.3-2.1 4.1-4.5 4.5v2.3z" fill="currentColor"/></svg>
                             <div class="mini-icon">⚡</div>
                         </div>
-                        <h3>Électricité, Électronique &amp; Instrumentation</h3>
+                        <h3>Électricité, Électronique et Instrumentation</h3>
                         <p class="expertise-desc">Installations électriques, conception de cartes PCB sur mesure, instrumentation industrielle et maintenance électrique.</p>
                         <ul class="expertise-list">
                             <li>Installations électriques</li>
-                            <li>Conception électronique &amp; Cartes PCB</li>
-                            <li>Instrumentation &amp; Capteurs</li>
+                            <li>Conception électronique et Cartes PCB</li>
+                            <li>Instrumentation et Capteurs</li>
                             <li>Maintenance électrique</li>
                         </ul>
                     </div>
                     <!-- 2. Robotique -->
                     <div class="expertise-card" data-index="2">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_robo.png" alt="Robotique et Systèmes Embarqués" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M19 8h-1V7c0-2.76-2.24-5-5-5S8 4.24 8 7v1H7c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2v-8c0-1.1-.9-2-2-2zm-6-4c1.66 0 3 1.34 3 3v1H10V7c0-1.66 1.34-3 3-3zm4 14H7v-8h10v8zm-7-5c-.83 0-1.5-.67-1.5-1.5S9.17 10 10 10s1.5.67 1.5 1.5S10.83 13 10 13zm6 0c-.83 0-1.5-.67-1.5-1.5S15.17 10 16 10s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z" fill="currentColor"/></svg>
                             <div class="mini-icon">🤖</div>
                         </div>
-                        <h3>Robotique &amp; Systèmes Embarqués</h3>
+                        <h3>Robotique et Systèmes Embarqués</h3>
                         <p class="expertise-desc">Développement sur microcontrôleurs avancés, création de robots autonomes et intégration de drones pour diverses applications.</p>
                         <ul class="expertise-list">
                             <li>Arduino / ESP32 / Raspberry Pi</li>
                             <li>Robots autonomes</li>
-                            <li>Drones industriels &amp; civils</li>
+                            <li>Drones industriels et civils</li>
                             <li>Systèmes automatisés embarqués</li>
                         </ul>
                     </div>
                     <!-- 3. Domotique -->
                     <div class="expertise-card" data-index="3">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="Domotique et Smart Buildings" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm5 15h-2v-6H9v6H7v-7.81l5-4.5 5 4.5V18z" fill="currentColor"/></svg>
                             <div class="mini-icon">🏠</div>
                         </div>
-                        <h3>Domotique &amp; Smart Buildings</h3>
+                        <h3>Domotique et Smart Buildings</h3>
                         <p class="expertise-desc">Automatisation résidentielle pour des maisons connectées, systèmes de sécurité intelligents et contrôle d'accès moderne.</p>
                         <ul class="expertise-list">
-                            <li>Maison connectée &amp; IoT</li>
+                            <li>Maison connectée et IoT</li>
                             <li>Contrôle d'accès intelligent</li>
-                            <li>Éclairage intelligent &amp; économique</li>
-                            <li>Sécurité &amp; Télésurveillance</li>
+                            <li>Éclairage intelligent et économique</li>
+                            <li>Sécurité et Télésurveillance</li>
                         </ul>
                     </div>
                     <!-- 4. Automatisation -->
                     <div class="expertise-card" data-index="4">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="Automatisation et Contrôle" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M22 9h-4.79l-1.97-4.74C14.9 3.49 14.12 3 13.25 3H10.75c-.87 0-1.65.49-1.99 1.26L6.79 9H2c-1.1 0-2 .9-2 2v4c0 1.1.9 2 2 2h2v2c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-2h2c1.1 0 2-.9 2-2v-4c0-1.1-.9-2-2-2zm-6 8H8v-4h8v4zm-1-8h-6l1.25-3h3.5L15 9z" fill="currentColor"/></svg>
                             <div class="mini-icon">🏭</div>
                         </div>
-                        <h3>Automatisation &amp; Contrôle</h3>
+                        <h3>Automatisation et Contrôle</h3>
                         <p class="expertise-desc">Programmation d'automates industriels (PLC), régulation par variateurs de vitesse et développement de systèmes de supervision SCADA.</p>
                         <ul class="expertise-list">
                             <li>Automates programmables (PLC)</li>
-                            <li>Variateurs de vitesse &amp; Moteurs</li>
+                            <li>Variateurs de vitesse et Moteurs</li>
                             <li>Supervision industrielle (SCADA)</li>
-                            <li>Capteurs industriels &amp; Instrumentation</li>
+                            <li>Capteurs industriels et Instrumentation</li>
                         </ul>
                     </div>
-                    <!-- 5. Logiciel & IA -->
+                    <!-- 5. Logiciel et IA -->
                     <div class="expertise-card" data-index="5">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_info.png" alt="Logiciel et Intelligence Artificielle" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M20 18c1.1 0 1.99-.9 1.99-2L22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2H0v2h24v-2h-4zM4 6h16v10H4V6z" fill="currentColor"/></svg>
                             <div class="mini-icon">💻</div>
                         </div>
-                        <h3>Logiciel &amp; Intelligence Artificielle</h3>
+                        <h3>Logiciel et Intelligence Artificielle</h3>
                         <p class="expertise-desc">Conception d'applications web, mobiles et de bureau robustes, combinées à l'intégration d'algorithmes d'IA et de vision par ordinateur.</p>
                         <ul class="expertise-list">
-                            <li>Applications Web, Mobile &amp; Desktop</li>
-                            <li>Intelligence Artificielle &amp; Machine Learning</li>
+                            <li>Applications Web, Mobile et Desktop</li>
+                            <li>Intelligence Artificielle et Machine Learning</li>
                             <li>Vision par ordinateur</li>
                             <li>Optimisation d'algorithmes</li>
                         </ul>
                     </div>
-                    <!-- 6. Réseaux & IoT -->
+                    <!-- 6. Réseaux et IoT -->
                     <div class="expertise-card" data-index="6">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="Réseaux, Télécoms et IoT" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" fill="currentColor"/></svg>
                             <div class="mini-icon">🌐</div>
                         </div>
-                        <h3>Réseaux, Télécoms &amp; IoT</h3>
+                        <h3>Réseaux, Télécoms et IoT</h3>
                         <p class="expertise-desc">Architecture réseau d'entreprise, déploiement de fibre optique et communication intelligente entre équipements connectés (IoT).</p>
                         <ul class="expertise-list">
-                            <li>Réseaux informatiques &amp; Wi-Fi</li>
-                            <li>Fibre optique &amp; Câblage</li>
+                            <li>Réseaux informatiques et Wi-Fi</li>
+                            <li>Fibre optique et Câblage</li>
                             <li>Internet des Objets (IoT)</li>
                             <li>Protocoles de communication</li>
                         </ul>
                     </div>
                     <!-- 7. Énergies Renouvelables -->
                     <div class="expertise-card" data-index="7">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="Énergies Renouvelables" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm1 15h-2v-6h2v6zm0-8h-2V7h2v3z" fill="currentColor"/></svg>
                             <div class="mini-icon">☀️</div>
@@ -225,67 +250,79 @@
                         <h3>Énergies Renouvelables</h3>
                         <p class="expertise-desc">Installation de systèmes solaires photovoltaïques, gestion de parcs de batteries et audit pour l'efficacité énergétique.</p>
                         <ul class="expertise-list">
-                            <li>Solaire photovoltaïque &amp; Hybride</li>
-                            <li>Gestion de batteries &amp; Onduleurs</li>
-                            <li>Efficacité &amp; Audit énergétique</li>
+                            <li>Solaire photovoltaïque et Hybride</li>
+                            <li>Gestion de batteries et Onduleurs</li>
+                            <li>Efficacité et Audit énergétique</li>
                             <li>Solutions d'alimentation autonomes</li>
                         </ul>
                     </div>
                     <!-- 8. Prototypage -->
                     <div class="expertise-card" data-index="8">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="Fabrication et Prototypage" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.3C.5 6.7.9 9.8 2.9 11.8c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.5z" fill="currentColor"/></svg>
                             <div class="mini-icon">🛠️</div>
                         </div>
-                        <h3>Fabrication &amp; Prototypage</h3>
+                        <h3>Fabrication et Prototypage</h3>
                         <p class="expertise-desc">Impression 3D industrielle, découpe laser précise et usinage numérique CNC pour matérialiser vos produits physiques.</p>
                         <ul class="expertise-list">
-                            <li>Impression 3D &amp; Découpe laser</li>
+                            <li>Impression 3D et Découpe laser</li>
                             <li>Usinage mécanique CNC</li>
                             <li>Conception mécanique CAO/DAO</li>
                             <li>Fabrication rapide de prototypes</li>
                         </ul>
                     </div>
-                    <!-- 9. R&D -->
+                    <!-- 9. Recherche et D�veloppement -->
                     <div class="expertise-card" data-index="9">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="RetD et Innovation" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z" fill="currentColor"/></svg>
                             <div class="mini-icon">🔬</div>
                         </div>
-                        <h3>R&amp;D et Innovation</h3>
+                        <h3>RetD et Innovation</h3>
                         <p class="expertise-desc">Recherche appliquée en ingénierie, expérimentation avancée et accompagnement pour le dépôt de brevets industriels.</p>
                         <ul class="expertise-list">
                             <li>Expérimentation en laboratoire</li>
                             <li>Conception de nouveaux produits</li>
-                            <li>Brevets &amp; Propriété Intellectuelle</li>
+                            <li>Brevets et Propriété Intellectuelle</li>
                             <li>Essais techniques de conformité</li>
                         </ul>
                     </div>
                     <!-- 10. Formation -->
                     <div class="expertise-card" data-index="10">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="Formation et Assistance" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 13c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5z" fill="currentColor"/></svg>
                             <div class="mini-icon">🎓</div>
                         </div>
-                        <h3>Formation &amp; Assistance</h3>
+                        <h3>Formation et Assistance</h3>
                         <p class="expertise-desc">Programmes de formation professionnelle pratique, audits techniques poussés et contrats de maintenance curative et préventive.</p>
                         <ul class="expertise-list">
                             <li>Formations techniques pratiques</li>
-                            <li>Audits &amp; Diagnostics de systèmes</li>
-                            <li>Maintenance curative &amp; préventive</li>
+                            <li>Audits et Diagnostics de systèmes</li>
+                            <li>Maintenance curative et préventive</li>
                             <li>Accompagnement de projets techniques</li>
                         </ul>
                     </div>
                     <!-- 11. Construction -->
                     <div class="expertise-card" data-index="11">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="Construction et Bâtiment" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M12 2L2 12h3v8h14v-8h3L12 2zM7 18v-4h10v4H7z" fill="currentColor"/></svg>
                             <div class="mini-icon">🏗️</div>
                         </div>
-                        <h3>Construction &amp; Bâtiment</h3>
+                        <h3>Construction et Bâtiment</h3>
                         <p class="expertise-desc">Ingénierie civile, conception architecturale et intégration de technologies modernes pour des bâtiments intelligents et durables.</p>
                         <ul class="expertise-list">
-                            <li>Génie civil &amp; Topographie</li>
+                            <li>Génie civil et Topographie</li>
                             <li>Architecture intelligente</li>
                             <li>Smart Building</li>
                             <li>Gestion de chantier</li>
@@ -293,6 +330,9 @@
                     </div>
                     <!-- 12. Mécanique -->
                     <div class="expertise-card" data-index="12">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="Mécanique Industrielle" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.06-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.73,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.06,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.43-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.49-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z" fill="currentColor"/></svg>
                             <div class="mini-icon">⚙️</div>
@@ -300,26 +340,48 @@
                         <h3>Mécanique Industrielle</h3>
                         <p class="expertise-desc">Conception, usinage, fabrication de pièces sur mesure et maintenance de systèmes mécaniques complexes pour l'industrie.</p>
                         <ul class="expertise-list">
-                            <li>Usinage &amp; Fabrication</li>
+                            <li>Usinage et Fabrication</li>
                             <li>Mécanique de précision</li>
                             <li>Maintenance mécanique</li>
                             <li>Conception de machines</li>
                         </ul>
                     </div>
-
-                    <!-- 13. Vitrine & Peinture -->
+                    <!-- 13. Vitrine et Peinture -->
                     <div class="expertise-card" data-index="13">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_default.png" alt="Vitrine et Peinture" class="expertise-card-image">
+                        </div>
                         <div class="expertise-icon">
                             <svg viewBox="0 0 24 24" class="svg-icon"><path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34c-.39-.39-1.02-.39-1.41 0L9 12.25 11.75 15l9.96-9.96c.39-.39.39-1.02 0-1.41z" fill="currentColor"/></svg>
                             <div class="mini-icon">🎨</div>
                         </div>
-                        <h3>Vitrine &amp; Peinture</h3>
+                        <h3>Vitrine et Peinture</h3>
                         <p class="expertise-desc">Conception, fabrication et installation de vitrines commerciales et enseignes lumineuses, décoration murale et peinture professionnelle pour entreprises et commerces.</p>
                         <ul class="expertise-list">
-                            <li>Vitrines &amp; Enseignes lumineuses</li>
-                            <li>Peinture décorative &amp; commerciale</li>
-                            <li>Signalétique &amp; Affichage</li>
-                            <li>Décoration d'intérieur &amp; murale</li>
+                            <li>Vitrines et Enseignes lumineuses</li>
+                            <li>Peinture décorative et commerciale</li>
+                            <li>Signalétique et Affichage</li>
+                            <li>Décoration d'intérieur et murale</li>
+                        </ul>
+                    </div>
+                    <!-- 14. Menuiserie -->
+                    <div class="expertise-card" data-index="14">
+                        <div class="expertise-image-container">
+                            <img src="assets/images/expertise_menuiserie.png" alt="Menuiserie" class="expertise-card-image">
+                        </div>
+                        <div class="expertise-icon">
+                            <svg viewBox="0 0 24 24" class="svg-icon">
+                                <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 14l-5-5 1.41-1.41L12 14.17l7.59-7.59L21 8l-9 9z" fill="currentColor"/>
+                            </svg>
+                            <div class="mini-icon">🪵</div>
+                        </div>
+                        <h3>Menuiserie</h3>
+                        <p class="expertise-desc">Conception et fabrication d'ouvrages en bois sur mesure : meubles, portes, fenêtres et agencement intérieur avec des matériaux de qualité et un savoir-faire artisanal.</p>
+                        <ul class="expertise-list">
+                            <li>Meubles et mobilier sur mesure</li>
+                            <li>Portes et fenêtres en bois</li>
+                            <li>Agencement et décoration intérieure</li>
+                            <li>Fabrication de charpentes</li>
                         </ul>
                     </div>
                 </div>
@@ -359,7 +421,7 @@
                     <li><a href="expertises.html">Expertises</a></li>
                     <li><a href="boutique.html">Boutique</a></li>
                     <li><a href="apropos.html">À Propos</a></li>
-                    <li><a href="pdg.html">Mot du PDG</a></li>
+                    <li><a href="membres.html">Membres et Fondateurs</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -368,15 +430,15 @@
                 <ul>
                     <li>
                         <span class="footer-contact-icon">📱</span>
-                        <a href="https://wa.me/243993676906" target="_blank">WhatsApp : +243 993 676 906</a>
+                        <a href="https://wa.me/243895676906" target="_blank">WhatsApp : +243 895 676 906</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">📞</span>
-                        <a href="tel:+243993676906">Tél : +243 993 676 906</a>
+                        <a href="tel:+243895676906">Tél : +243 895 676 906</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">✉️</span>
-                        <a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a>
+                        <a href="mailto:LAITECH@gmail.com">LAITECH@gmail.com</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">📍</span>
@@ -408,6 +470,7 @@
             }, 'google_translate_element');
         }
 
+        let changeLangRetries = 0;
         function toggleLanguage() {
             var currentLang = localStorage.getItem('lai_tech_lang') || 'fr';
             var targetLang = currentLang === 'fr' ? 'en' : 'fr';
@@ -417,9 +480,15 @@
         function changeLanguage(langCode) {
             var selectField = document.querySelector("#google_translate_element select");
             if (!selectField) {
-                setTimeout(() => changeLanguage(langCode), 500);
+                if (changeLangRetries < 6) {
+                    changeLangRetries++;
+                    setTimeout(() => changeLanguage(langCode), 500);
+                } else {
+                    console.warn("Google Translate element not loaded yet.");
+                }
                 return;
             }
+            changeLangRetries = 0;
             
             for(var i=0; i < selectField.options.length; i++){
                 if(selectField.options[i].value == langCode){
@@ -431,9 +500,9 @@
             }
 
             // Update UI button
-            var btn = document.getElementById('langToggleBtn');
-            if (btn) {
-                btn.textContent = langCode === 'fr' ? 'EN' : 'FR';
+            var btnText = document.getElementById('langBtnText');
+            if (btnText) {
+                btnText.textContent = langCode === 'fr' ? 'EN' : 'FR';
             }
             
             localStorage.setItem('lai_tech_lang', langCode);
@@ -452,8 +521,8 @@
                 if(savedLang && savedLang === 'en') {
                     changeLanguage('en');
                 } else {
-                    var btn = document.getElementById('langToggleBtn');
-                    if (btn) btn.textContent = 'EN';
+                    var btnText = document.getElementById('langBtnText');
+                    if (btnText) btnText.textContent = 'EN';
                 }
                 setInterval(hideGoogleTranslate, 100); // Aggressively hide the banner
             }, 1000);
@@ -463,3 +532,8 @@
 
 </body>
 </html>
+
+
+
+
+

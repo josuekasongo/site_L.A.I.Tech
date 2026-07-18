@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=5">
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
 
     <!-- Anti Google Translate Banner -->
     <style>
@@ -33,8 +33,13 @@
             <!-- Google Translate Hidden Element -->
             <div id="google_translate_element" style="display:none;"></div>
             
-            <!-- Custom Language Toggle -->
-            <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">EN</button>
+                        <!-- Custom Language Toggle -->
+            <div class="lang-selector">
+                <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">
+
+                    <span id="langBtnText">EN</span>
+                </button>
+            </div>
 
             <nav id="primary-navigation" class="primary-navigation">
                 <ul class="nav-list">
@@ -45,21 +50,21 @@
                             <li><a href="index.html#services">Domaines d'Expertise</a></li>
                             <li><a href="index.html#valeurs">Nos Valeurs</a></li>
                             <li><a href="index.html#gammes">Gammes de Produits</a></li>
-                            <li><a href="index.html#vision">Vision & Mission</a></li>
+                            <li><a href="index.html#vision">Vision et Mission</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="labo.html" class="nav-link active">Le Labo</a>
                         <ul class="dropdown-menu">
                             <li><a href="labo.html">Présentation</a></li>
-                            <li><a href="labo.html#recherche">Recherche & Développement</a></li>
+                            <li><a href="labo.html#recherche">Recherche et Développement</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="atelier.html" class="nav-link">L'Atelier</a>
                         <ul class="dropdown-menu">
                             <li><a href="atelier.html">Présentation</a></li>
-                            <li><a href="atelier.html#conception">Prototypage & Fabrication</a></li>
+                            <li><a href="atelier.html#conception">Prototypage et Fabrication</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -71,7 +76,7 @@
                     <li class="has-dropdown">
                         <a href="boutique.html" class="nav-link">Boutique</a>
                         <ul class="dropdown-menu">
-                            <li><a href="boutique.html#shop">Équipements & Composants</a></li>
+                            <li><a href="boutique.html#shop">Équipements et Composants</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -82,15 +87,14 @@
                             <li><a href="apropos.html#organisation">Organisation</a></li>
                             <li><a href="apropos.html#produits">Gammes de Produits</a></li>
                             <li><a href="apropos.html#objectifs">Objectifs</a></li>
-                            <li><a href="apropos.html#identite">Identité & Philosophie</a></li>
+                            <li><a href="apropos.html#identite">Identité et Philosophie</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="pdg.html" class="nav-link">Le PDG</a>
+                        <a href="membres.html" class="nav-link">Membres</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pdg.html#pdg">Mot du PDG</a></li>
-                            <li><a href="pdg.html#pdg-cv">Curriculum Vitae</a></li>
-                            <li><a href="pdg.html#pdg-team">L'Équipe L.A.I. TECH</a></li>
+                            <li><a href="membres.html#fondateurs">Les Fondateurs</a></li>
+                            <li><a href="membres.html#equipe">L'Équipe L.A.I. TECH</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -124,67 +128,143 @@
             </div>
         </section>
 
-        <section id="recherche" style="padding: 5rem 0; background-color: var(--bg-dark-secondary);">
+                <section id="recherche" style="padding: 5rem 0; background-color: var(--bg-dark-secondary);">
             <div class="container">
-                <div class="about-grid" style="gap: 3rem;">
+                <div class="about-grid" style="gap: 3rem; align-items: start;">
                     <div class="about-text-content">
-                        <span class="section-tag" style="color: var(--accent-cyan); border-color: var(--accent-cyan);">R&D</span>
-                        <h2 class="section-title" style="font-size: 2rem; margin-top: 1rem;">Recherche & <span style="color: var(--accent-cyan);">Développement</span></h2>
+                        <span class="section-tag" style="color: var(--accent-cyan); border-color: var(--accent-cyan);">Recherche et D�veloppement</span>
+                        <h2 class="section-title" style="font-size: 2rem; margin-top: 1rem;">Recherche et <span style="color: var(--accent-cyan);">Développement</span></h2>
                         <div class="title-underline" style="background-color: var(--accent-cyan);"></div>
                         <p style="margin-top: 1.5rem; line-height: 1.8; color: var(--text-muted);">
                             Le Laboratoire de L.A.I. TECH est dédié à la <strong>recherche fondamentale et appliquée</strong> en électronique, en informatique embarquée, en intelligence artificielle et en énergies renouvelables. C'est ici que naissent les idées avant d'être transmises à l'Atelier pour réalisation physique.
                         </p>
-                        <p style="margin-top: 1rem; line-height: 1.8; color: var(--text-muted);">
-                            Notre processus R&D suit une méthodologie rigoureuse : identification du besoin, étude scientifique, conception architecturale, développement algorithmique, simulation et validation, avant transfert vers le pôle fabrication.
-                        </p>
+                        
+                        <div style="margin-top: 3rem;">
+                            <h3 style="font-size: 1.5rem; font-weight: 700; margin-bottom: 2rem; color: var(--text-white); letter-spacing: 0.5px;">Notre Processus de Recherche et Développement</h3>
+                            <div style="position: relative; padding-left: 2.5rem; border-left: 3px solid rgba(8,145,178,0.25);">
+                                <div style="position: relative; margin-bottom: 2rem; transition: transform 0.3s;" onmouseover="this.style.transform='translateX(8px)';" onmouseout="this.style.transform='translateX(0)';">
+                                    <span style="position: absolute; left: -3.2rem; top: 0; width: 1.4rem; height: 1.4rem; background: var(--accent-cyan); border-radius: 50%; border: 3px solid var(--bg-dark-secondary); box-shadow: 0 0 10px rgba(8,145,178,0.5);"></span>
+                                    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(8,145,178,0.15); padding: 1.2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                                        <h4 style="font-size: 1.1rem; color: var(--text-white); font-weight: 700; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.6rem;">
+                                            <span style="background: var(--accent-cyan); color: var(--bg-dark-primary); font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 800;">ÉTAPPE 1</span> 🎯 Identification
+                                        </h4>
+                                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0;">Définition et analyse approfondie du besoin utilisateur ou de la problématique technologique à résoudre.</p>
+                                    </div>
+                                </div>
+                                <div style="position: relative; margin-bottom: 2rem; transition: transform 0.3s;" onmouseover="this.style.transform='translateX(8px)';" onmouseout="this.style.transform='translateX(0)';">
+                                    <span style="position: absolute; left: -3.2rem; top: 0; width: 1.4rem; height: 1.4rem; background: var(--accent-cyan); border-radius: 50%; border: 3px solid var(--bg-dark-secondary); box-shadow: 0 0 10px rgba(8,145,178,0.5);"></span>
+                                    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(8,145,178,0.15); padding: 1.2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                                        <h4 style="font-size: 1.1rem; color: var(--text-white); font-weight: 700; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.6rem;">
+                                            <span style="background: var(--accent-cyan); color: var(--bg-dark-primary); font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 800;">ÉTAPPE 2</span> 🧪 Recherche
+                                        </h4>
+                                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0;">Études physiques et scientifiques, veille technologique poussée et modélisations théoriques préalables.</p>
+                                    </div>
+                                </div>
+                                <div style="position: relative; margin-bottom: 2rem; transition: transform 0.3s;" onmouseover="this.style.transform='translateX(8px)';" onmouseout="this.style.transform='translateX(0)';">
+                                    <span style="position: absolute; left: -3.2rem; top: 0; width: 1.4rem; height: 1.4rem; background: var(--accent-cyan); border-radius: 50%; border: 3px solid var(--bg-dark-secondary); box-shadow: 0 0 10px rgba(8,145,178,0.5);"></span>
+                                    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(8,145,178,0.15); padding: 1.2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                                        <h4 style="font-size: 1.1rem; color: var(--text-white); font-weight: 700; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.6rem;">
+                                            <span style="background: var(--accent-cyan); color: var(--bg-dark-primary); font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 800;">ÉTAPPE 3</span> 📐 Conception
+                                        </h4>
+                                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0;">Conception assistée par ordinateur (CAO) de l'architecture électronique (schematics et routage PCB) et de l'enveloppe mécanique.</p>
+                                    </div>
+                                </div>
+                                <div style="position: relative; margin-bottom: 2rem; transition: transform 0.3s;" onmouseover="this.style.transform='translateX(8px)';" onmouseout="this.style.transform='translateX(0)';">
+                                    <span style="position: absolute; left: -3.2rem; top: 0; width: 1.4rem; height: 1.4rem; background: var(--accent-cyan); border-radius: 50%; border: 3px solid var(--bg-dark-secondary); box-shadow: 0 0 10px rgba(8,145,178,0.5);"></span>
+                                    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(8,145,178,0.15); padding: 1.2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                                        <h4 style="font-size: 1.1rem; color: var(--text-white); font-weight: 700; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.6rem;">
+                                            <span style="background: var(--accent-cyan); color: var(--bg-dark-primary); font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 800;">ÉTAPPE 4</span> 💻 Algorithmes
+                                        </h4>
+                                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0;">Programmation et simulation du microprogramme (firmware) avec intégration d'algorithmes et de systèmes intelligents de commande.</p>
+                                    </div>
+                                </div>
+                                <div style="position: relative; transition: transform 0.3s;" onmouseover="this.style.transform='translateX(8px)';" onmouseout="this.style.transform='translateX(0)';">
+                                    <span style="position: absolute; left: -3.2rem; top: 0; width: 1.4rem; height: 1.4rem; background: var(--accent-cyan); border-radius: 50%; border: 3px solid var(--bg-dark-secondary); box-shadow: 0 0 10px rgba(8,145,178,0.5);"></span>
+                                    <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(8,145,178,0.15); padding: 1.2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.15);">
+                                        <h4 style="font-size: 1.1rem; color: var(--text-white); font-weight: 700; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.6rem;">
+                                            <span style="background: var(--accent-cyan); color: var(--bg-dark-primary); font-size: 0.75rem; padding: 0.2rem 0.5rem; border-radius: 4px; font-weight: 800;">ÉTAPPE 5</span> 🛠️ Transfert
+                                        </h4>
+                                        <p style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.5; margin: 0;">Validation finale et transfert des fichiers de fabrication et nomenclatures à l'Atelier de production physique.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Sidebar d'illustration conceptuelle -->
                     <div class="about-vision-mission">
-
-                        <div class="vision-card" style="border-left: 4px solid var(--accent-cyan); background-color: var(--white);">
-                            <h3 style="color: var(--text-white);">Notre Processus R&amp;D</h3>
-                            <p style="margin-top: 1rem; line-height: 1.8;">
-                                🎯 <strong>Identification</strong> : Définition du besoin ou du problème.<br>
-                                🧪 <strong>Recherche</strong> : Études physiques et théoriques.<br>
-                                📐 <strong>Conception</strong> : Plan d'architecture électronique et mécanique.<br>
-                                💻 <strong>Algorithmes</strong> : Développement et simulation du firmware.<br>
-                                🛠️ <strong>Transfert</strong> : Envoi des plans à l'Atelier pour réalisation.
-                            </p>
+                        <div style="background: rgba(255, 255, 255, 0.02); box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 16px; padding: 2.2rem; border: 1px solid rgba(8,145,178,0.25); border-top: 5px solid var(--accent-cyan);">
+                            <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-white); display: flex; align-items: center; gap: 0.6rem;">
+                                📋 Responsabilités Officielles du Pôle LAB
+                            </h3>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="margin-bottom: 0.9rem; display: flex; align-items: flex-start; gap: 0.7rem; color: var(--text-muted); font-size: 0.92rem;"><span style="color: var(--accent-cyan); font-weight: bold;">✓</span> <span>Recherche scientifique et veille</span></li>
+                                <li style="margin-bottom: 0.9rem; display: flex; align-items: flex-start; gap: 0.7rem; color: var(--text-muted); font-size: 0.92rem;"><span style="color: var(--accent-cyan); font-weight: bold;">✓</span> <span>Conception de circuits électroniques (PCB)</span></li>
+                                <li style="margin-bottom: 0.9rem; display: flex; align-items: flex-start; gap: 0.7rem; color: var(--text-muted); font-size: 0.92rem;"><span style="color: var(--accent-cyan); font-weight: bold;">✓</span> <span>Développement de microprogrammes et firmwares</span></li>
+                                <li style="margin-bottom: 0.9rem; display: flex; align-items: flex-start; gap: 0.7rem; color: var(--text-muted); font-size: 0.92rem;"><span style="color: var(--accent-cyan); font-weight: bold;">✓</span> <span>Intégration d'Algorithmes et Intelligence Artificielle</span></li>
+                                <li style="margin-bottom: 0.9rem; display: flex; align-items: flex-start; gap: 0.7rem; color: var(--text-muted); font-size: 0.92rem;"><span style="color: var(--accent-cyan); font-weight: bold;">✓</span> <span>Simulation CAO 3D thermique et mécanique</span></li>
+                                <li style="margin-bottom: 0.9rem; display: flex; align-items: flex-start; gap: 0.7rem; color: var(--text-muted); font-size: 0.92rem;"><span style="color: var(--accent-cyan); font-weight: bold;">✓</span> <span>Programmation d'interfaces de contrôle</span></li>
+                                <li style="display: flex; align-items: flex-start; gap: 0.7rem; color: var(--text-muted); font-size: 0.92rem;"><span style="color: var(--accent-cyan); font-weight: bold;">✓</span> <span>Validation fonctionnelle en environnement virtuel</span></li>
+                            </ul>
                         </div>
                         
-                        <div class="skills-highlight" style="margin-top: 1rem;">
-                            <span class="skill-tag" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">Algorithmique</span>
-                            <span class="skill-tag" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">PCB Design</span>
-                            <span class="skill-tag" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">CAO 3D</span>
-                            <span class="skill-tag" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">Calculs de structures</span>
+                        <div class="skills-highlight" style="margin-top: 1.8rem; display: flex; flex-wrap: wrap; gap: 0.6rem;">
+                            <span class="skill-tag" style="border-color: var(--accent-cyan); color: var(--accent-cyan); background: rgba(8,145,178,0.06); font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.8rem;">Algorithmique</span>
+                            <span class="skill-tag" style="border-color: var(--accent-cyan); color: var(--accent-cyan); background: rgba(8,145,178,0.06); font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.8rem;">PCB Design</span>
+                            <span class="skill-tag" style="border-color: var(--accent-cyan); color: var(--accent-cyan); background: rgba(8,145,178,0.06); font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.8rem;">CAO 3D</span>
+                            <span class="skill-tag" style="border-color: var(--accent-cyan); color: var(--accent-cyan); background: rgba(8,145,178,0.06); font-weight: 600; padding: 0.4rem 0.9rem; border-radius: 50px; font-size: 0.8rem;">Calculs structures</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Responsabilités officielles du LAB -->
-                <div style="margin-top: 5rem; background: linear-gradient(135deg, rgba(8,145,178,0.05) 0%, transparent 100%); border: 1px solid rgba(8,145,178,0.15); border-radius: 16px; padding: 2.5rem;">
-                    <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 1.5rem; color: var(--text-white);">📋 Responsabilités officielles du Pôle LAB</h3>
-                    <div style="display: flex; flex-wrap: wrap; gap: 0.7rem;">
-                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(8,145,178,0.25); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--accent-cyan); background: rgba(8,145,178,0.06);">🔬 Recherche scientifique</span>
-                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(8,145,178,0.25); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--accent-cyan); background: rgba(8,145,178,0.06);">💡 Innovation</span>
-                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(8,145,178,0.25); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--accent-cyan); background: rgba(8,145,178,0.06);">⚡ Conception électronique</span>
-                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(8,145,178,0.25); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--accent-cyan); background: rgba(8,145,178,0.06);">💻 Développement logiciel</span>
-                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(8,145,178,0.25); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--accent-cyan); background: rgba(8,145,178,0.06);">🤖 Intelligence artificielle</span>
-                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(8,145,178,0.25); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--accent-cyan); background: rgba(8,145,178,0.06);">🖨️ Prototypage</span>
-                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(8,145,178,0.25); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--accent-cyan); background: rgba(8,145,178,0.06);">🧪 Essais</span>
-                        <span style="padding: 0.45rem 1rem; border: 1px solid rgba(8,145,178,0.25); border-radius: 50px; font-size: 0.82rem; font-weight: 600; color: var(--accent-cyan); background: rgba(8,145,178,0.06);">✅ Validation</span>
+                <!-- Projets en cours (Recherche) -->
+                <div style="margin-top: 6rem;">
+                    <div style="text-align: center; margin-bottom: 4rem;">
+                        <span class="section-tag" style="color: var(--accent-cyan); border-color: var(--accent-cyan);">Innovations</span>
+                        <h2 class="section-title" style="font-size: 2rem; margin-top: 1rem;">Projets en <span style="color: var(--accent-cyan);">Cours</span> (Recherche)</h2>
+                        <div class="title-underline" style="background-color: var(--accent-cyan);"></div>
+                        <p style="color: var(--text-muted); margin-top: 1rem;">Découvrez les prototypes d'équipements innovants actuellement en phase de développement théorique et d'essais électroniques au Labo.</p>
+                    </div>
+
+                    <div class="projects-grid">
+                        <!-- Projet Labo : Interrupteur Crépusculaire -->
+                        <div class="project-card">
+                            <div class="project-image-wrapper">
+                                <img src="assets/images/projet_crepusculaire.png" alt="Interrupteur Crépusculaire" class="project-img">
+                                <div class="project-status">Tests Électroniques</div>
+                            </div>
+                            <div class="project-content">
+                                <div class="project-category">L.A.I Smart - Domotique</div>
+                                <h3 class="project-title">Interrupteur Crépusculaire</h3>
+                                <p class="project-desc">
+                                    Système intelligent détectant la luminosité ambiante pour allumer/éteindre automatiquement les lampes de l'installation. Il intègre un mode de dérogation manuel en cas de défaillance du capteur.
+                                </p>
+                                <div class="project-meta">
+                                    <div class="project-meta-item">
+                                        <span class="project-meta-icon">⚙️</span>
+                                        <span>Principe : Asservissement LDR et commande relais</span>
+                                    </div>
+                                    <div class="project-meta-item">
+                                        <span class="project-meta-icon">💰</span>
+                                        <span>Prix estimé : ~ 15 USD</span>
+                                    </div>
+                                </div>
+                                <div class="project-actions">
+                                    <a href="#" class="btn btn-secondary" style="width: 100%; text-align: center; color: var(--primary-color); border-color: var(--primary-color);">Télécharger le plan théorique</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div style="text-align: center; margin-top: 3rem;">
+                <div style="text-align: center; margin-top: 4rem;">
                     <a href="atelier.html" class="btn btn-primary" style="background-color: var(--primary-color);">Découvrir l'Atelier →</a>
-                    <a href="apropos.html" class="btn btn-secondary" style="margin-left: 1rem;">À Propos de L.A.I. TECH</a>
+                    <a href="apropos.html" class="btn btn-secondary" style="margin-left: 1rem; color: var(--text-muted); border-color: var(--border-color);">À Propos de L.A.I. TECH</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- Pied de page -->
+        <!-- Pied de page -->
     <footer class="main-footer">
         <div class="container footer-grid">
             <div class="footer-brand">
@@ -192,6 +272,13 @@
                     <span class="logo-text">L.A.I. <span class="accent-color">TECH</span></span>
                 </a>
                 <p class="footer-desc">Laboratoire et Atelier des Innovations Technologiques. Recherche, Conception, Prototypage et Maintenance.</p>
+                <div class="social-icons">
+                    <a href="https://wa.me/243895676906" aria-label="WhatsApp" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a>
+                    <a href="#" aria-label="Facebook" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/></svg></a>
+                    <a href="#" aria-label="Instagram" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg></a>
+                    <a href="#" aria-label="LinkedIn" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg></a>
+                    <a href="#" aria-label="TikTok" class="social-icon"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 2.78-1.15 5.54-3.33 7.31-1.92 1.57-4.58 2.22-6.93 1.75-2.73-.54-5.02-2.61-5.74-5.26-.82-2.99.36-6.4 2.96-8.1 2.12-1.39 4.88-1.57 7.22-.68.17.07.35.15.52.23V7.78c-2.45-.75-5.23-.62-7.55.57-1.8 1.05-3.15 2.87-3.52 4.92-.37 2.05.07 4.23 1.25 5.92 1.4 1.94 3.75 3.09 6.13 3.1 2.6-.02 5.09-1.43 6.31-3.69.86-1.6 1.18-3.46 1.17-5.32-.01-5.6-.03-11.2-.01-16.79-1.28.02-2.56.03-3.84.05z"/></svg></a>
+                </div>
             </div>
             <div class="footer-links">
                 <h4>Navigation</h4>
@@ -201,22 +288,25 @@
                     <li><a href="atelier.html">L'Atelier</a></li>
                     <li><a href="expertises.html">Expertises</a></li>
                     <li><a href="boutique.html">Boutique</a></li>
+                    <li><a href="apropos.html">À Propos</a></li>
+                    <li><a href="membres.html">Membres et Fondateurs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-contact">
                 <h4>Contactez-nous</h4>
                 <ul>
                     <li>
-                        <span class="footer-contact-icon">📱</span>
-                        <a href="https://wa.me/243993676906" target="_blank">WhatsApp : +243 993 676 906</a>
+                        <span class="footer-contact-icon">📞</span>
+                        <a href="tel:+243895676906">Appel : +243 895 676 906</a>
                     </li>
                     <li>
-                        <span class="footer-contact-icon">📞</span>
-                        <a href="tel:+243993676906">Tél : +243 993 676 906</a>
+                        <span class="footer-contact-icon">📱</span>
+                        <a href="https://wa.me/243895676906" target="_blank">WhatsApp : +243 895 676 906</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">✉️</span>
-                        <a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a>
+                        <a href="mailto:LAITECH@gmail.com">LAITECH@gmail.com</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">📍</span>
@@ -248,6 +338,7 @@
             }, 'google_translate_element');
         }
 
+        let changeLangRetries = 0;
         function toggleLanguage() {
             var currentLang = localStorage.getItem('lai_tech_lang') || 'fr';
             var targetLang = currentLang === 'fr' ? 'en' : 'fr';
@@ -257,9 +348,15 @@
         function changeLanguage(langCode) {
             var selectField = document.querySelector("#google_translate_element select");
             if (!selectField) {
-                setTimeout(() => changeLanguage(langCode), 500);
+                if (changeLangRetries < 6) {
+                    changeLangRetries++;
+                    setTimeout(() => changeLanguage(langCode), 500);
+                } else {
+                    console.warn("Google Translate element not loaded yet.");
+                }
                 return;
             }
+            changeLangRetries = 0;
             
             for(var i=0; i < selectField.options.length; i++){
                 if(selectField.options[i].value == langCode){
@@ -271,9 +368,9 @@
             }
 
             // Update UI button
-            var btn = document.getElementById('langToggleBtn');
-            if (btn) {
-                btn.textContent = langCode === 'fr' ? 'EN' : 'FR';
+            var btnText = document.getElementById('langBtnText');
+            if (btnText) {
+                btnText.textContent = langCode === 'fr' ? 'EN' : 'FR';
             }
             
             localStorage.setItem('lai_tech_lang', langCode);
@@ -292,8 +389,8 @@
                 if(savedLang && savedLang === 'en') {
                     changeLanguage('en');
                 } else {
-                    var btn = document.getElementById('langToggleBtn');
-                    if (btn) btn.textContent = 'EN';
+                    var btnText = document.getElementById('langBtnText');
+                    if (btnText) btnText.textContent = 'EN';
                 }
                 setInterval(hideGoogleTranslate, 100); // Aggressively hide the banner
             }, 1000);
@@ -303,3 +400,8 @@
 
 </body>
 </html>
+
+
+
+
+

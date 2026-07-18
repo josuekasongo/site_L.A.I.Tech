@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=5">
+    <link rel="stylesheet" href="assets/css/style.css?v=6">
 
     <!-- Anti Google Translate Banner -->
     <style>
@@ -32,8 +32,13 @@
             <!-- Google Translate Hidden Element -->
             <div id="google_translate_element" style="display:none;"></div>
             
-            <!-- Custom Language Toggle -->
-            <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">EN</button>
+                        <!-- Custom Language Toggle -->
+            <div class="lang-selector">
+                <button class="lang-toggle-btn" onclick="toggleLanguage()" id="langToggleBtn" title="Changer la langue / Change language">
+
+                    <span id="langBtnText">EN</span>
+                </button>
+            </div>
 
             <nav id="primary-navigation" class="primary-navigation">
                 <ul class="nav-list">
@@ -44,21 +49,21 @@
                             <li><a href="index.html#services">Domaines d'Expertise</a></li>
                             <li><a href="index.html#valeurs">Nos Valeurs</a></li>
                             <li><a href="index.html#gammes">Gammes de Produits</a></li>
-                            <li><a href="index.html#vision">Vision & Mission</a></li>
+                            <li><a href="index.html#vision">Vision et Mission</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="labo.html" class="nav-link">Le Labo</a>
                         <ul class="dropdown-menu">
                             <li><a href="labo.html">Présentation</a></li>
-                            <li><a href="labo.html#recherche">Recherche & Développement</a></li>
+                            <li><a href="labo.html#recherche">Recherche et Développement</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
                         <a href="atelier.html" class="nav-link">L'Atelier</a>
                         <ul class="dropdown-menu">
                             <li><a href="atelier.html">Présentation</a></li>
-                            <li><a href="atelier.html#conception">Prototypage & Fabrication</a></li>
+                            <li><a href="atelier.html#conception">Prototypage et Fabrication</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -70,7 +75,7 @@
                     <li class="has-dropdown">
                         <a href="boutique.html" class="nav-link">Boutique</a>
                         <ul class="dropdown-menu">
-                            <li><a href="boutique.html#shop">Équipements & Composants</a></li>
+                            <li><a href="boutique.html#shop">Équipements et Composants</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -81,15 +86,14 @@
                             <li><a href="apropos.html#organisation">Organisation</a></li>
                             <li><a href="apropos.html#produits">Gammes de Produits</a></li>
                             <li><a href="apropos.html#objectifs">Objectifs</a></li>
-                            <li><a href="apropos.html#identite">Identité & Philosophie</a></li>
+                            <li><a href="apropos.html#identite">Identité et Philosophie</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="pdg.html" class="nav-link">Le PDG</a>
+                        <a href="membres.html" class="nav-link">Membres</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pdg.html#pdg">Mot du PDG</a></li>
-                            <li><a href="pdg.html#pdg-cv">Curriculum Vitae</a></li>
-                            <li><a href="pdg.html#pdg-team">L'Équipe L.A.I. TECH</a></li>
+                            <li><a href="membres.html#fondateurs">Les Fondateurs</a></li>
+                            <li><a href="membres.html#equipe">L'Équipe L.A.I. TECH</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
@@ -122,7 +126,7 @@
                             </div>
                             <div>
                                 <h4>Téléphone</h4>
-                                <p><a href="tel:+243993676906">+243 993 676 906</a></p>
+                                <p><a href="tel:+243895676906">+243 895 676 906</a></p>
                             </div>
                         </div>
 
@@ -133,7 +137,7 @@
                             </div>
                             <div>
                                 <h4>E-mail</h4>
-                                <p><a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a></p>
+                                <p><a href="mailto:LAITECH@gmail.com">LAITECH@gmail.com</a></p>
                             </div>
                         </div>
 
@@ -190,6 +194,52 @@
             </div>
         </section>
 
+        <!-- Section Boîte à Idées & Co-Innovation -->
+        <section id="visiteur-idees" style="padding: 6rem 0; background: linear-gradient(135deg, rgba(128,0,32,0.06) 0%, transparent 100%); border-top: 1px solid var(--border-color);">
+            <div class="container" style="max-width: 800px;">
+                <div style="text-align: center; margin-bottom: 3rem;">
+                    <span class="section-tag" style="color: var(--primary-color); border-color: var(--primary-color);">Co-Innovation</span>
+                    <h2 class="section-title" style="margin-top: 1rem;">Boîte à <span class="accent-color">Idées</span></h2>
+                    <div class="title-underline"></div>
+                    <p class="section-subtitle" style="margin-top: 1rem; color: var(--text-muted);">
+                        Exprimez vos problèmes quotidiens ou vos idées les plus folles ! Chez L.A.I. TECH, chaque difficulté est une opportunité d'innover.
+                    </p>
+                </div>
+                
+                <div class="contact-form-container" style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(128,0,32,0.15); box-shadow: 0 10px 30px rgba(0,0,0,0.15); border-radius: 16px; padding: 2.5rem;">
+                    <form id="ideaForm" class="contact-form">
+                        <h3 class="form-title" style="text-align: center; margin-bottom: 2rem; color: var(--text-white);">Soumettre un Problème / une Idée</h3>
+                        <div class="form-group">
+                            <label for="idea-name">Nom Complet</label>
+                            <input type="text" id="idea-name" name="name" required placeholder="Votre nom complet">
+                        </div>
+                        <div class="form-group">
+                            <label for="idea-email">Adresse E-mail</label>
+                            <input type="email" id="idea-email" name="email" required placeholder="Votre adresse e-mail">
+                        </div>
+                        <div class="form-group">
+                            <label for="idea-sector">Secteur concerné</label>
+                            <select id="idea-sector" name="sector" required>
+                                <option value="" disabled selected>Choisissez le domaine d'impact</option>
+                                <option value="agriculture">🌿 Agriculture et Irrigation</option>
+                                <option value="energie">☀️ Énergie et Électricité</option>
+                                <option value="menage">🏠 Maison et Domotique (Smart Home)</option>
+                                <option value="industrie">🏭 Industrie et Automatisation</option>
+                                <option value="robotique">🤖 Robotique et Drones</option>
+                                <option value="autre">💡 Autre idée folle</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="idea-description">Décrivez le problème que vous rencontrez ou votre idée d'innovation</label>
+                            <textarea id="idea-description" name="description" rows="5" required placeholder="Expliquez clairement ce qui vous bloque au quotidien ou ce que vous aimeriez voir exister..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block" id="submitIdeaBtn">Soumettre mon idée / problème</button>
+                        <div id="ideaFeedback" class="form-feedback hidden"></div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
         <!-- Bloc Objectifs / Pourquoi nous choisir -->
         <section style="padding: 6rem 0; background: var(--bg-dark-secondary);">
             <div class="container">
@@ -201,12 +251,12 @@
                 <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 1.8rem;">
                     <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04); text-align: center;">
                         <div style="font-size: 2.2rem; margin-bottom: 1rem;">🔬</div>
-                        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem;">Laboratoire &amp; Atelier</h3>
-                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">Deux pôles complémentaires : recherche &amp; conception au Labo, fabrication &amp; installation à l'Atelier.</p>
+                        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem;">Laboratoire et Atelier</h3>
+                        <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">Deux pôles complémentaires : recherche et conception au Labo, fabrication et installation à l'Atelier.</p>
                     </div>
                     <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04); text-align: center;">
                         <div style="font-size: 2.2rem; margin-bottom: 1rem;">🏆</div>
-                        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem;">Excellence &amp; Qualité</h3>
+                        <h3 style="font-size: 1rem; font-weight: 700; margin-bottom: 0.6rem;">Excellence et Qualité</h3>
                         <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.6;">Chaque solution est testée, validée et livrée avec un suivi technique complet.</p>
                     </div>
                     <div style="background: var(--white); border: 1px solid var(--border-color); border-radius: 16px; padding: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.04); text-align: center;">
@@ -244,7 +294,7 @@
                     <li><a href="expertises.html">Expertises</a></li>
                     <li><a href="boutique.html">Boutique</a></li>
                     <li><a href="apropos.html">À Propos</a></li>
-                    <li><a href="pdg.html">Mot du PDG</a></li>
+                    <li><a href="membres.html">Membres et Fondateurs</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
@@ -253,15 +303,15 @@
                 <ul>
                     <li>
                         <span class="footer-contact-icon">📱</span>
-                        <a href="https://wa.me/243993676906" target="_blank">WhatsApp : +243 993 676 906</a>
+                        <a href="https://wa.me/243895676906" target="_blank">WhatsApp : +243 895 676 906</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">📞</span>
-                        <a href="tel:+243993676906">Tél : +243 993 676 906</a>
+                        <a href="tel:+243895676906">Tél : +243 895 676 906</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">✉️</span>
-                        <a href="mailto:jkasongo288@gmail.com">jkasongo288@gmail.com</a>
+                        <a href="mailto:LAITECH@gmail.com">LAITECH@gmail.com</a>
                     </li>
                     <li>
                         <span class="footer-contact-icon">📍</span>
@@ -293,6 +343,7 @@
             }, 'google_translate_element');
         }
 
+        let changeLangRetries = 0;
         function toggleLanguage() {
             var currentLang = localStorage.getItem('lai_tech_lang') || 'fr';
             var targetLang = currentLang === 'fr' ? 'en' : 'fr';
@@ -302,9 +353,15 @@
         function changeLanguage(langCode) {
             var selectField = document.querySelector("#google_translate_element select");
             if (!selectField) {
-                setTimeout(() => changeLanguage(langCode), 500);
+                if (changeLangRetries < 6) {
+                    changeLangRetries++;
+                    setTimeout(() => changeLanguage(langCode), 500);
+                } else {
+                    console.warn("Google Translate element not loaded yet.");
+                }
                 return;
             }
+            changeLangRetries = 0;
             
             for(var i=0; i < selectField.options.length; i++){
                 if(selectField.options[i].value == langCode){
@@ -316,9 +373,9 @@
             }
 
             // Update UI button
-            var btn = document.getElementById('langToggleBtn');
-            if (btn) {
-                btn.textContent = langCode === 'fr' ? 'EN' : 'FR';
+            var btnText = document.getElementById('langBtnText');
+            if (btnText) {
+                btnText.textContent = langCode === 'fr' ? 'EN' : 'FR';
             }
             
             localStorage.setItem('lai_tech_lang', langCode);
@@ -337,8 +394,8 @@
                 if(savedLang && savedLang === 'en') {
                     changeLanguage('en');
                 } else {
-                    var btn = document.getElementById('langToggleBtn');
-                    if (btn) btn.textContent = 'EN';
+                    var btnText = document.getElementById('langBtnText');
+                    if (btnText) btnText.textContent = 'EN';
                 }
                 setInterval(hideGoogleTranslate, 100); // Aggressively hide the banner
             }, 1000);
@@ -348,3 +405,7 @@
 
 </body>
 </html>
+
+
+
+

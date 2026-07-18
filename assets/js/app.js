@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. GESTION DE LA BARRE DE NAVIGATION (STICKY & RESPONSIVE)
     // ==========================================
     const header = document.getElementById('header');
-    const menuBtn = document.getElementById('menuBtn');
+    const menuBtn = document.querySelector('.mobile-nav-toggle');
     const primaryNav = document.getElementById('primary-navigation');
     const navLinks = document.querySelectorAll('.nav-link');
 

@@ -363,8 +363,21 @@ ul {
     border: none;
     cursor: pointer;
     padding: 0.5rem;
-    z-index: 1001;
+    position: relative;
+    z-index: 1100;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
+
+/* Overlay derrière le menu mobile */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    z-index: 1050;
+}
+.nav-overlay.active { display: block; }
 
 /* ==========================================================================
    LANGUAGE SWITCHER & GOOGLE TRANSLATE
@@ -422,7 +435,8 @@ body {
     width: 25px;
     height: 3px;
     margin: 5px auto;
-    background-color: var(--text-white);
+    background-color: #222222;
+    border-radius: 3px;
     transition: var(--transition);
 }
 

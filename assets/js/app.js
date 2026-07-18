@@ -12,6 +12,25 @@ document.addEventListener('DOMContentLoaded', () => {
     const primaryNav = document.getElementById('primary-navigation');
     const navLinks = document.querySelectorAll('.nav-link');
 
+    // Crée et injecte l'overlay dynamiquement
+    const overlay = document.createElement('div');
+    overlay.className = 'nav-overlay';
+    document.body.appendChild(overlay);
+
+    function openMenu() {
+        primaryNav.classList.add('open');
+        menuBtn.setAttribute('aria-expanded', 'true');
+        overlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+        primaryNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded', 'false');
+        overlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
     // Sticky header au défilement
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -21,35 +40,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Menu Mobile
+    // Bouton burger
     if (menuBtn && primaryNav) {
-        menuBtn.addEventListener('click', () => {
-            const isOpened = menuBtn.getAttribute('aria-expanded') === 'true';
-            
-            if (isOpened) {
-                // Fermer le menu
-                menuBtn.setAttribute('aria-expanded', 'false');
-                primaryNav.classList.remove('open');
-                document.body.style.overflow = '';
+        menuBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            if (primaryNav.classList.contains('open')) {
+                closeMenu();
             } else {
-                // Ouvrir le menu
-                menuBtn.setAttribute('aria-expanded', 'true');
-                primaryNav.classList.add('open');
-                document.body.style.overflow = 'hidden'; // Empêcher le défilement arrière
+                openMenu();
             }
         });
     }
 
-    // Fermer le menu mobile lors d'un clic sur un lien
+    // Fermer via overlay (clic en dehors du menu)
+    overlay.addEventListener('click', closeMenu);
+
+    // Fermer via un lien de navigation
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (primaryNav.classList.contains('open')) {
-                menuBtn.setAttribute('aria-expanded', 'false');
-                primaryNav.classList.remove('open');
-                document.body.style.overflow = '';
-            }
+            closeMenu();
         });
     });
+
+    // Fermer avec la touche Echap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+    });
+
 
     // Highlight des liens de navigation lors du scroll
     const sections = document.querySelectorAll('section[id]');

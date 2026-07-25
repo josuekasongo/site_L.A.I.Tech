@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const header = document.getElementById('header');
     const menuBtn = document.querySelector('.mobile-nav-toggle');
     const primaryNav = document.getElementById('primary-navigation');
-    const navLinks = document.querySelectorAll('.nav-link');
+    const navLinks = document.querySelectorAll('#primary-navigation a');
 
     // Crée et injecte l'overlay dynamiquement
     const overlay = document.createElement('div');

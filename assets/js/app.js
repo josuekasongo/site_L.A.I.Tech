@@ -387,3 +387,70 @@ document.addEventListener('DOMContentLoaded', () => {
     // Lancer aprÃ¨s un petit dÃ©lai
     setTimeout(runTypewriter, 500);
 });
+
+/* ==========================================================================
+   MODAL DES SERVICES (LOGIQUE)
+   ========================================================================== */
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('serviceModal');
+    if (!modal) return;
+    
+    const closeModalBtn = document.getElementById('closeServiceModal');
+    const modalImage = document.getElementById('modalImage');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalDesc = document.getElementById('modalDesc');
+    const modalList = document.getElementById('modalList');
+    
+    const expertiseCards = document.querySelectorAll('.expertise-card');
+    
+    function openModal(card) {
+        // Récupérer les informations de la carte cliquée
+        const img = card.querySelector('.expertise-card-image').src;
+        const title = card.querySelector('h3').textContent;
+        const desc = card.querySelector('.expertise-desc').textContent;
+        const listItems = card.querySelectorAll('.expertise-list li');
+        
+        // Mettre à jour le contenu du modal
+        modalImage.src = img;
+        modalTitle.textContent = title;
+        modalDesc.textContent = desc;
+        
+        modalList.innerHTML = ''; // Vider la liste existante
+        listItems.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item.textContent;
+            modalList.appendChild(li);
+        });
+        
+        // Afficher le modal
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden'; // Empêcher le défilement de la page en arrière-plan
+    }
+    
+    function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+    
+    // Ajouter l'événement de clic sur toutes les cartes d'expertise
+    expertiseCards.forEach(card => {
+        card.addEventListener('click', () => openModal(card));
+    });
+    
+    // Fermer le modal via le bouton
+    closeModalBtn.addEventListener('click', closeModal);
+    
+    // Fermer le modal en cliquant à l'extérieur du contenu
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+    
+    // Fermer avec la touche Echap
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+            closeModal();
+        }
+    });
+});

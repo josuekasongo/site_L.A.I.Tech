@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=10">
+    <link rel="stylesheet" href="assets/css/style.css?v=11">
 
     <!-- Anti Google Translate Banner -->
     <style>
@@ -445,6 +445,26 @@
 
     </main>
 
+    <!-- Modal des Services -->
+    <div id="serviceModal" class="service-modal" aria-hidden="true">
+        <div class="service-modal-content">
+            <button class="close-modal" id="closeServiceModal" aria-label="Fermer la fenêtre">&times;</button>
+            <div class="modal-image-container">
+                <img id="modalImage" src="" alt="Image du service">
+            </div>
+            <div class="modal-body">
+                <h3 id="modalTitle">Titre du service</h3>
+                <p id="modalDesc">Description complète du service...</p>
+                <ul id="modalList" class="expertise-list">
+                    <!-- Les éléments de liste seront injectés ici -->
+                </ul>
+                <div style="margin-top: 2rem; text-align: center;">
+                    <a href="contact.html" class="btn btn-primary">Nous Contacter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Section Boîte à Idées / Proposer un problème -->
     <section id="problemes-visiteurs" style="padding: 6rem 0; background: linear-gradient(135deg, rgba(128,0,32,0.04) 0%, transparent 100%); border-top: 1px solid var(--border-color);">
         <div class="container" style="text-align: center;">
@@ -516,7 +536,7 @@
     </footer>
 
     <!-- Script JavaScript -->
-    <script src="assets/js/app.js?v=10"></script>
+    <script src="assets/js/app.js?v=11"></script>
 
     <!-- Scripts Google Translate (Custom UI) -->
     <script type="text/javascript">

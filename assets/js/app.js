@@ -394,63 +394,69 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const modal = document.getElementById('serviceModal');
     if (!modal) return;
-    
+
     const closeModalBtn = document.getElementById('closeServiceModal');
-    const modalImage = document.getElementById('modalImage');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalDesc = document.getElementById('modalDesc');
-    const modalList = document.getElementById('modalList');
-    
+    const modalImage   = document.getElementById('modalImage');
+    const modalTitle   = document.getElementById('modalTitle');
+    const modalDesc    = document.getElementById('modalDesc');
+    const modalList    = document.getElementById('modalList');
+    const modalEmoji   = document.getElementById('modalEmoji');
+
     const expertiseCards = document.querySelectorAll('.expertise-card');
-    
+
     function openModal(card) {
-        // Récupérer les informations de la carte cliquée
-        const img = card.querySelector('.expertise-card-image').src;
-        const title = card.querySelector('h3').textContent;
-        const desc = card.querySelector('.expertise-desc').textContent;
+        const imgEl   = card.querySelector('.expertise-card-image');
+        const emojiEl = card.querySelector('.mini-icon');
+
+        const img   = imgEl ? imgEl.src : '';
+        const emoji = emojiEl ? emojiEl.textContent.trim() : '??';
+        const title = card.querySelector('h3').textContent.trim();
+        const desc  = card.querySelector('.expertise-desc').textContent.trim();
         const listItems = card.querySelectorAll('.expertise-list li');
-        
-        // Mettre à jour le contenu du modal
+
+        // Injecter le contenu
         modalImage.src = img;
+        modalImage.alt = title;
+        if (modalEmoji) modalEmoji.textContent = emoji;
         modalTitle.textContent = title;
-        modalDesc.textContent = desc;
-        
-        modalList.innerHTML = ''; // Vider la liste existante
+        modalDesc.textContent  = desc;
+
+        modalList.innerHTML = '';
         listItems.forEach(item => {
             const li = document.createElement('li');
-            li.textContent = item.textContent;
+            li.textContent = item.textContent.trim();
             modalList.appendChild(li);
         });
-        
-        // Afficher le modal
+
+        // Afficher
+        modal.setAttribute('aria-hidden', 'false');
         modal.classList.add('show');
-        document.body.style.overflow = 'hidden'; // Empêcher le défilement de la page en arrière-plan
+        document.body.style.overflow = 'hidden';
     }
-    
+
     function closeModal() {
         modal.classList.remove('show');
+        modal.setAttribute('aria-hidden', 'true');
         document.body.style.overflow = '';
     }
-    
-    // Ajouter l'événement de clic sur toutes les cartes d'expertise
+
+    // Clic sur une carte
     expertiseCards.forEach(card => {
+        card.style.cursor = 'pointer';
         card.addEventListener('click', () => openModal(card));
     });
-    
-    // Fermer le modal via le bouton
+
+    // Fermer via le bouton X
     closeModalBtn.addEventListener('click', closeModal);
-    
-    // Fermer le modal en cliquant à l'extérieur du contenu
+
+    // Fermer en cliquant sur le fond
     modal.addEventListener('click', (e) => {
-        if (e.target === modal) {
-            closeModal();
-        }
+        if (e.target === modal) closeModal();
     });
-    
-    // Fermer avec la touche Echap
+
+    // Fermer avec Echap
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape' && modal.classList.contains('show')) {
-            closeModal();
-        }
+        if (e.key === 'Escape' && modal.classList.contains('show')) closeModal();
     });
 });
+

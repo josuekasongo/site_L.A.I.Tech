@@ -15,7 +15,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css?v=15">
+    <link rel="stylesheet" href="assets/css/style.css?v=16">
 
     <!-- Anti Google Translate Banner -->
     <style>
@@ -515,8 +515,27 @@
         </div>
     </footer>
 
+    <!-- Modal Expertise / Service -->
+    <div class="service-modal-overlay" id="serviceModal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="service-modal-content">
+            <button class="service-modal-close" id="closeServiceModal" aria-label="Fermer">&times;</button>
+            <div class="service-modal-image-header">
+                <img id="modalImage" src="" alt="">
+                <div class="service-modal-emoji-badge" id="modalEmoji"></div>
+            </div>
+            <div class="service-modal-body">
+                <h2 class="service-modal-title" id="modalTitle"></h2>
+                <p class="service-modal-desc" id="modalDesc"></p>
+                <div class="service-modal-divider"></div>
+                <div class="service-modal-list-title">Compétences clés</div>
+                <ul class="service-modal-list" id="modalList"></ul>
+                <a href="contact.html" class="service-modal-cta">Nous contacter →</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Script JavaScript -->
-    <script src="assets/js/app.js?v=15"></script>
+    <script src="assets/js/app.js?v=16"></script>
 
     <!-- Scripts Google Translate (Custom UI) -->
     <script type="text/javascript">

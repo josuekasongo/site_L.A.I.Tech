@@ -401,6 +401,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalDesc    = document.getElementById('modalDesc');
     const modalList    = document.getElementById('modalList');
     const modalEmoji   = document.getElementById('modalEmoji');
+    const modalMissions = document.getElementById('modalMissions');
 
     const expertiseCards = document.querySelectorAll('.expertise-card');
 
@@ -427,6 +428,18 @@ document.addEventListener('DOMContentLoaded', () => {
             li.textContent = item.textContent.trim();
             modalList.appendChild(li);
         });
+
+        // Gestion des missions
+        const missionsData = card.querySelector('.expertise-missions');
+        if (modalMissions) {
+            if (missionsData) {
+                modalMissions.innerHTML = missionsData.innerHTML;
+                modalMissions.style.display = 'block';
+            } else {
+                modalMissions.innerHTML = '';
+                modalMissions.style.display = 'none';
+            }
+        }
 
         // Afficher
         modal.setAttribute('aria-hidden', 'false');

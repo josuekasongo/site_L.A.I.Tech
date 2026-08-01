@@ -226,6 +226,25 @@
                             <li>Base de données et Cloud</li>
                             <li>Administration système</li>
                         </ul>
+                        
+                        <!-- Exemple de missions (sera lu par le JS) -->
+                        <div class="expertise-missions" style="display: none;">
+                            <h3 class="missions-section-title">Missions et Projets Récents</h3>
+                            <div class="mission-item">
+                                <h4 class="mission-title">Développement d'un ERP sur mesure</h4>
+                                <p class="mission-desc">Création d'un système de gestion complet pour automatiser les processus d'une PME locale.</p>
+                                <div class="mission-gallery">
+                                    <div class="mission-img-placeholder">
+                                        <span>[Insérez votre image ici]</span>
+                                        <small>Ex: Capture d'écran du logiciel</small>
+                                    </div>
+                                    <div class="mission-img-placeholder">
+                                        <span>[Insérez votre image ici]</span>
+                                        <small>Ex: Interface d'administration</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- 2. Électricité et Électronique -->
@@ -529,13 +548,17 @@
                 <div class="service-modal-divider"></div>
                 <div class="service-modal-list-title">Compétences clés</div>
                 <ul class="service-modal-list" id="modalList"></ul>
+                
+                <!-- Zone où les missions seront injectées -->
+                <div id="modalMissions"></div>
+                
                 <a href="contact.html" class="service-modal-cta">Nous contacter →</a>
             </div>
         </div>
     </div>
 
     <!-- Script JavaScript -->
-    <script src="assets/js/app.js?v=16"></script>
+    <script src="assets/js/app.js?v=17"></script>
 
     <!-- Scripts Google Translate (Custom UI) -->
     <script type="text/javascript">

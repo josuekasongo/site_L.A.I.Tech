@@ -34,7 +34,7 @@
             </a>
 
             <!-- Google Translate Hidden Element -->
-            <div id="google_translate_element" style="display:none;"></div>
+            <div id="google_translate_element" style="position: absolute; opacity: 0; width: 0; height: 0; overflow: hidden; pointer-events: none;"></div>
             
                         <!-- Custom Language Toggle -->
             <div class="lang-selector">
@@ -364,7 +364,7 @@
             for(var i=0; i < selectField.options.length; i++){
                 if(selectField.options[i].value == langCode){
                     selectField.selectedIndex = i;
-                    var event = new Event('change');
+                    var event = new Event('change', {bubbles: true});
                     selectField.dispatchEvent(event);
                     break;
                 }
